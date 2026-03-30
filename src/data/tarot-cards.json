@@ -1,0 +1,1465 @@
+[
+  {
+    "id": 0,
+    "name": "Card 0",
+    "nameCn": "卡0",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 0",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 0",
+    "action": "Take action 0",
+    "tiktokCaption": "Caption 0"
+  },
+  {
+    "id": 1,
+    "name": "Card 1",
+    "nameCn": "卡1",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 1",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 1",
+    "action": "Take action 1",
+    "tiktokCaption": "Caption 1"
+  },
+  {
+    "id": 2,
+    "name": "Card 2",
+    "nameCn": "卡2",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 2",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 2",
+    "action": "Take action 2",
+    "tiktokCaption": "Caption 2"
+  },
+  {
+    "id": 3,
+    "name": "Card 3",
+    "nameCn": "卡3",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 3",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 3",
+    "action": "Take action 3",
+    "tiktokCaption": "Caption 3"
+  },
+  {
+    "id": 4,
+    "name": "Card 4",
+    "nameCn": "卡4",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 4",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 4",
+    "action": "Take action 4",
+    "tiktokCaption": "Caption 4"
+  },
+  {
+    "id": 5,
+    "name": "Card 5",
+    "nameCn": "卡5",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 5",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 5",
+    "action": "Take action 5",
+    "tiktokCaption": "Caption 5"
+  },
+  {
+    "id": 6,
+    "name": "Card 6",
+    "nameCn": "卡6",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 6",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 6",
+    "action": "Take action 6",
+    "tiktokCaption": "Caption 6"
+  },
+  {
+    "id": 7,
+    "name": "Card 7",
+    "nameCn": "卡7",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 7",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 7",
+    "action": "Take action 7",
+    "tiktokCaption": "Caption 7"
+  },
+  {
+    "id": 8,
+    "name": "Card 8",
+    "nameCn": "卡8",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 8",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 8",
+    "action": "Take action 8",
+    "tiktokCaption": "Caption 8"
+  },
+  {
+    "id": 9,
+    "name": "Card 9",
+    "nameCn": "卡9",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 9",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 9",
+    "action": "Take action 9",
+    "tiktokCaption": "Caption 9"
+  },
+  {
+    "id": 10,
+    "name": "Card 10",
+    "nameCn": "卡10",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 10",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 10",
+    "action": "Take action 10",
+    "tiktokCaption": "Caption 10"
+  },
+  {
+    "id": 11,
+    "name": "Card 11",
+    "nameCn": "卡11",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 11",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 11",
+    "action": "Take action 11",
+    "tiktokCaption": "Caption 11"
+  },
+  {
+    "id": 12,
+    "name": "Card 12",
+    "nameCn": "卡12",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 12",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 12",
+    "action": "Take action 12",
+    "tiktokCaption": "Caption 12"
+  },
+  {
+    "id": 13,
+    "name": "Card 13",
+    "nameCn": "卡13",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 13",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 13",
+    "action": "Take action 13",
+    "tiktokCaption": "Caption 13"
+  },
+  {
+    "id": 14,
+    "name": "Card 14",
+    "nameCn": "卡14",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 14",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 14",
+    "action": "Take action 14",
+    "tiktokCaption": "Caption 14"
+  },
+  {
+    "id": 15,
+    "name": "Card 15",
+    "nameCn": "卡15",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 15",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 15",
+    "action": "Take action 15",
+    "tiktokCaption": "Caption 15"
+  },
+  {
+    "id": 16,
+    "name": "Card 16",
+    "nameCn": "卡16",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 16",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 16",
+    "action": "Take action 16",
+    "tiktokCaption": "Caption 16"
+  },
+  {
+    "id": 17,
+    "name": "Card 17",
+    "nameCn": "卡17",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 17",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 17",
+    "action": "Take action 17",
+    "tiktokCaption": "Caption 17"
+  },
+  {
+    "id": 18,
+    "name": "Card 18",
+    "nameCn": "卡18",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 18",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 18",
+    "action": "Take action 18",
+    "tiktokCaption": "Caption 18"
+  },
+  {
+    "id": 19,
+    "name": "Card 19",
+    "nameCn": "卡19",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 19",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 19",
+    "action": "Take action 19",
+    "tiktokCaption": "Caption 19"
+  },
+  {
+    "id": 20,
+    "name": "Card 20",
+    "nameCn": "卡20",
+    "keywords": [
+      "Keyword1",
+      "Keyword2"
+    ],
+    "summary": "Summary for card 20",
+    "reading": {
+      "love": "Love reading",
+      "career": "Career reading",
+      "health": "Health reading",
+      "spirituality": "Spiritual reading"
+    },
+    "affirmation": "My affirmation 20",
+    "action": "Take action 20",
+    "tiktokCaption": "Caption 20"
+  },
+  {
+    "id": 21,
+    "name": "Wand 1",
+    "nameCn": "权杖1",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 1",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 22,
+    "name": "Wand 2",
+    "nameCn": "权杖2",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 2",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 23,
+    "name": "Wand 3",
+    "nameCn": "权杖3",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 3",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 24,
+    "name": "Wand 4",
+    "nameCn": "权杖4",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 4",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 25,
+    "name": "Wand 5",
+    "nameCn": "权杖5",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 5",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 26,
+    "name": "Wand 6",
+    "nameCn": "权杖6",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 6",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 27,
+    "name": "Wand 7",
+    "nameCn": "权杖7",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 7",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 28,
+    "name": "Wand 8",
+    "nameCn": "权杖8",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 8",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 29,
+    "name": "Wand 9",
+    "nameCn": "权杖9",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 9",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 30,
+    "name": "Wand 10",
+    "nameCn": "权杖10",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 10",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 31,
+    "name": "Wand 11",
+    "nameCn": "权杖11",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 11",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 32,
+    "name": "Wand 12",
+    "nameCn": "权杖12",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 12",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 33,
+    "name": "Wand 13",
+    "nameCn": "权杖13",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 13",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 34,
+    "name": "Wand 14",
+    "nameCn": "权杖14",
+    "keywords": [
+      "Wands",
+      "Fire"
+    ],
+    "summary": "Wand card 14",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 35,
+    "name": "Cup 1",
+    "nameCn": "圣杯1",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 1",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 36,
+    "name": "Cup 2",
+    "nameCn": "圣杯2",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 2",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 37,
+    "name": "Cup 3",
+    "nameCn": "圣杯3",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 3",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 38,
+    "name": "Cup 4",
+    "nameCn": "圣杯4",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 4",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 39,
+    "name": "Cup 5",
+    "nameCn": "圣杯5",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 5",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 40,
+    "name": "Cup 6",
+    "nameCn": "圣杯6",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 6",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 41,
+    "name": "Cup 7",
+    "nameCn": "圣杯7",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 7",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 42,
+    "name": "Cup 8",
+    "nameCn": "圣杯8",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 8",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 43,
+    "name": "Cup 9",
+    "nameCn": "圣杯9",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 9",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 44,
+    "name": "Cup 10",
+    "nameCn": "圣杯10",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 10",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 45,
+    "name": "Cup 11",
+    "nameCn": "圣杯11",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 11",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 46,
+    "name": "Cup 12",
+    "nameCn": "圣杯12",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 12",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 47,
+    "name": "Cup 13",
+    "nameCn": "圣杯13",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 13",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 48,
+    "name": "Cup 14",
+    "nameCn": "圣杯14",
+    "keywords": [
+      "Cups",
+      "Water"
+    ],
+    "summary": "Cup card 14",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 49,
+    "name": "Sword 1",
+    "nameCn": "宝剑1",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 1",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 50,
+    "name": "Sword 2",
+    "nameCn": "宝剑2",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 2",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 51,
+    "name": "Sword 3",
+    "nameCn": "宝剑3",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 3",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 52,
+    "name": "Sword 4",
+    "nameCn": "宝剑4",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 4",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 53,
+    "name": "Sword 5",
+    "nameCn": "宝剑5",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 5",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 54,
+    "name": "Sword 6",
+    "nameCn": "宝剑6",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 6",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 55,
+    "name": "Sword 7",
+    "nameCn": "宝剑7",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 7",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 56,
+    "name": "Sword 8",
+    "nameCn": "宝剑8",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 8",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 57,
+    "name": "Sword 9",
+    "nameCn": "宝剑9",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 9",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 58,
+    "name": "Sword 10",
+    "nameCn": "宝剑10",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 10",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 59,
+    "name": "Sword 11",
+    "nameCn": "宝剑11",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 11",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 60,
+    "name": "Sword 12",
+    "nameCn": "宝剑12",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 12",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 61,
+    "name": "Sword 13",
+    "nameCn": "宝剑13",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 13",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 62,
+    "name": "Sword 14",
+    "nameCn": "宝剑14",
+    "keywords": [
+      "Swords",
+      "Air"
+    ],
+    "summary": "Sword card 14",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 63,
+    "name": "Pentacle 1",
+    "nameCn": "星币1",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 1",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 64,
+    "name": "Pentacle 2",
+    "nameCn": "星币2",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 2",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 65,
+    "name": "Pentacle 3",
+    "nameCn": "星币3",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 3",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 66,
+    "name": "Pentacle 4",
+    "nameCn": "星币4",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 4",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 67,
+    "name": "Pentacle 5",
+    "nameCn": "星币5",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 5",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 68,
+    "name": "Pentacle 6",
+    "nameCn": "星币6",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 6",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 69,
+    "name": "Pentacle 7",
+    "nameCn": "星币7",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 7",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 70,
+    "name": "Pentacle 8",
+    "nameCn": "星币8",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 8",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 71,
+    "name": "Pentacle 9",
+    "nameCn": "星币9",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 9",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 72,
+    "name": "Pentacle 10",
+    "nameCn": "星币10",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 10",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 73,
+    "name": "Pentacle 11",
+    "nameCn": "星币11",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 11",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 74,
+    "name": "Pentacle 12",
+    "nameCn": "星币12",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 12",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 75,
+    "name": "Pentacle 13",
+    "nameCn": "星币13",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 13",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  },
+  {
+    "id": 76,
+    "name": "Pentacle 14",
+    "nameCn": "星币14",
+    "keywords": [
+      "Pentacles",
+      "Earth"
+    ],
+    "summary": "Pentacle card 14",
+    "reading": {
+      "love": "Love",
+      "career": "Career",
+      "health": "Health",
+      "spirituality": "Spirit"
+    },
+    "affirmation": "Affirmation",
+    "action": "Action",
+    "tiktokCaption": "Caption"
+  }
+]
