@@ -1,0 +1,380 @@
+[
+  {
+    "id": 59,
+    "name": "Page of Swords",
+    "nameCn": "宝剑侍从",
+    "keywords": [
+      "New Ideas",
+      "Curiosity",
+      "Thirst for Knowledge",
+      "Communication"
+    ],
+    "summary": "A young figure holds sword up, eager for truth.",
+    "reading": {
+      "love": "Curiosity about love and truth.",
+      "career": "New ideas need to be communicated.",
+      "health": "Curiosity about health practices.",
+      "spirituality": "Seek truth with young enthusiasm."
+    },
+    "affirmation": "I seek truth with open mind and heart.",
+    "action": "Research or communicate one new idea today.",
+    "tiktokCaption": "Seeking truth everywhere I go #tarot #truth #curiosity"
+  },
+  {
+    "id": 60,
+    "name": "Knight of Swords",
+    "nameCn": "宝剑骑士",
+    "keywords": [
+      "Ambitious",
+      "Action-Oriented",
+      "Drive",
+      "Fast Thinking"
+    ],
+    "summary": "A knight charges with sword, full speed ahead.",
+    "reading": {
+      "love": "Fast-moving romantic pursuits.",
+      "career": "Ambitious action yields results.",
+      "health": "Rush to action may cause injury.",
+      "spirituality": "Quick spiritual insights occur."
+    },
+    "affirmation": "I channel my energy with focused precision.",
+    "action": "Act decisively on something important today.",
+    "tiktokCaption": "Focused energy, unstoppable drive #tarot #ambition #action"
+  },
+  {
+    "id": 61,
+    "name": "Queen of Swords",
+    "nameCn": "宝剑皇后",
+    "keywords": [
+      "Independent",
+      "Uncompromising",
+      "Direct",
+      "Clear Boundaries"
+    ],
+    "summary": "A queen holds sword, representing sharp intellect and clear boundaries.",
+    "reading": {
+      "love": "Independent love with clear boundaries.",
+      "career": "Sharp intellectual leadership.",
+      "health": "Clear about health needs.",
+      "spirituality": "Direct connection to truth."
+    },
+    "affirmation": "I honor my intelligence and maintain clear boundaries.",
+    "action": "Set one clear boundary today.",
+    "tiktokCaption": "Queen of my own mind and heart #tarot #queenenergy #boundaries"
+  },
+  {
+    "id": 62,
+    "name": "King of Swords",
+    "nameCn": "宝剑国王",
+    "keywords": [
+      "Intellectual Power",
+      "Authority",
+      "Truth",
+      "Clear Thinking"
+    ],
+    "summary": "A king sits with sword, representing ultimate intellectual authority.",
+    "reading": {
+      "love": "Clear thinking leads love decisions.",
+      "career": "Intellectual authority brings success.",
+      "health": "Mental approach to health.",
+      "spirituality": "Wisdom through clear thinking."
+    },
+    "affirmation": "I wield my intellect with wisdom and fairness.",
+    "action": "Use your best judgment in one decision today.",
+    "tiktokCaption": "Thinking my way to victory #tarot #intellect #wisdom #authority"
+  },
+  {
+    "id": 63,
+    "name": "Ace of Pentacles",
+    "nameCn": "星币 Ace",
+    "keywords": [
+      "Manifestation",
+      "Financial Opportunity",
+      "Prosperity",
+      "New Venture"
+    ],
+    "summary": "A hand emerges with pentacle, material and financial new beginning.",
+    "reading": {
+      "love": "Material security supports love.",
+      "career": "Financial opportunity emerges.",
+      "health": "Invest in your physical foundation.",
+      "spirituality": "Spiritual and material abundance connect."
+    },
+    "affirmation": "I am open to receiving material abundance.",
+    "action": "Invest in one area of your life today.",
+    "tiktokCaption": "Open to all the abundance coming my way #tarot #abundance #manifestation"
+  },
+  {
+    "id": 64,
+    "name": "Two of Pentacles",
+    "nameCn": "星币 2",
+    "keywords": [
+      "Multiple Priorities",
+      "Balance",
+      "Adaptability",
+      "Time Management"
+    ],
+    "summary": "A figure juggles two pentacles, balancing multiple priorities.",
+    "reading": {
+      "love": "Balance multiple relationship priorities.",
+      "career": "Manage multiple demands successfully.",
+      "health": "Balance various health aspects.",
+      "spirituality": "Adaptability in spiritual practice."
+    },
+    "affirmation": "I balance all priorities with grace.",
+    "action": "Organize your various priorities.",
+    "tiktokCaption": "Juggling life like a boss #tarot #balance #multitasking"
+  },
+  {
+    "id": 65,
+    "name": "Three of Pentacles",
+    "nameCn": "星币 3",
+    "keywords": [
+      "Teamwork",
+      "Collaboration",
+      "Learning",
+      "Implementation"
+    ],
+    "summary": "A craftsman works with two others, teamwork to build.",
+    "reading": {
+      "love": "Build relationships through teamwork.",
+      "career": "Collaboration leads to success.",
+      "health": "Work with healers and supporters.",
+      "spirituality": "Learn spiritual craft with teachers."
+    },
+    "affirmation": "I work collaboratively to achieve excellence.",
+    "action": "Seek help or offer collaboration today.",
+    "tiktokCaption": "Teamwork makes the dream work #tarot #teamwork #collaboration"
+  },
+  {
+    "id": 66,
+    "name": "Four of Pentacles",
+    "nameCn": "星币 4",
+    "keywords": [
+      "Saving Money",
+      "Security",
+      "Control",
+      "Greed"
+    ],
+    "summary": "A figure holds four pentacles close, tight grip on material.",
+    "reading": {
+      "love": "Holding back emotionally in love.",
+      "career": "Security is vital but do not hoard.",
+      "health": "Control can become rigidity.",
+      "spirituality": "Attachment to material can block spirit."
+    },
+    "affirmation": "I share abundance, knowing there is enough.",
+    "action": "Release grip on one thing you hold too tightly.",
+    "tiktokCaption": "Letting go of control #tarot #abundance #lettinggo"
+  },
+  {
+    "id": 67,
+    "name": "Five of Pentacles",
+    "nameCn": "星币 5",
+    "keywords": [
+      "Financial Loss",
+      "Isolation",
+      "Worry",
+      "Hardship"
+    ],
+    "summary": "A figure walks past church in snow, feeling alone in hardship.",
+    "reading": {
+      "love": "Worry affects relationships. Seek support.",
+      "career": "Financial hardship does not last.",
+      "health": "Hardship period requires support.",
+      "spirituality": "Even in darkness, help awaits."
+    },
+    "affirmation": "Even in darkness, I am not alone.",
+    "action": "Reach out for support in one area of struggle.",
+    "tiktokCaption": "Walking through the storm to the light #tarot #resilience #faith"
+  },
+  {
+    "id": 68,
+    "name": "Six of Pentacles",
+    "nameCn": "星币 6",
+    "keywords": [
+      "Giving",
+      "Receiving",
+      "Sharing",
+      "Generosity"
+    ],
+    "summary": "One figure gives coins to two others, circulation of abundance.",
+    "reading": {
+      "love": "Generosity flows in relationships.",
+      "career": "Financial circulation brings prosperity.",
+      "health": "Share wellness with others.",
+      "spirituality": "Spiritual abundance multiplies through giving."
+    },
+    "affirmation": "I am open to both giving and receiving.",
+    "action": "Give or receive help today.",
+    "tiktokCaption": "Abundance flows in and out #tarot #generosity #abundance"
+  },
+  {
+    "id": 69,
+    "name": "Seven of Pentacles",
+    "nameCn": "星币 7",
+    "keywords": [
+      "Long-Term View",
+      "Perseverance",
+      "Investment",
+      "Patience"
+    ],
+    "summary": "A figure leans on hoe, looking at growing plant, patient investment.",
+    "reading": {
+      "love": "Long-term commitment requires patience.",
+      "career": "Patience in investment yields returns.",
+      "health": "Long-term health habits matter.",
+      "spirituality": "Spiritual growth takes time."
+    },
+    "affirmation": "I am patient with my investments.",
+    "action": "Focus on long-term goals today.",
+    "tiktokCaption": "Patient planting for abundant harvest #tarot #patience #perseverance"
+  },
+  {
+    "id": 70,
+    "name": "Eight of Pentacles",
+    "nameCn": "星币 8",
+    "keywords": [
+      "Apprenticeship",
+      "Dedication",
+      "Skill Development",
+      "Quality"
+    ],
+    "summary": "An artisan works on pentacles, dedicated to craft mastery.",
+    "reading": {
+      "love": "Dedication to relationship skills.",
+      "career": "Mastery through dedicated work.",
+      "health": "Dedication to health practices.",
+      "spirituality": "Devotion to spiritual craft."
+    },
+    "affirmation": "I dedicate myself to excellence.",
+    "action": "Hone one skill today.",
+    "tiktokCaption": "Mastering my craft one day at a time #tarot #dedication #mastery"
+  },
+  {
+    "id": 71,
+    "name": "Nine of Pentacles",
+    "nameCn": "星币 9",
+    "keywords": [
+      "Abundance",
+      "Luxury",
+      "Self-Sufficiency",
+      "Independence"
+    ],
+    "summary": "A woman among vines and pentacles, enjoying earned abundance.",
+    "reading": {
+      "love": "Independent happiness, possibly solo.",
+      "career": "Abundance through own efforts.",
+      "health": "Enjoying physical abundance.",
+      "spirituality": "Material and spiritual abundance align."
+    },
+    "affirmation": "I enjoy the abundance I have created.",
+    "action": "Enjoy one thing you have worked for.",
+    "tiktokCaption": "Thriving in my own company #tarot #abundance #independence"
+  },
+  {
+    "id": 72,
+    "name": "Ten of Pentacles",
+    "nameCn": "星币 10",
+    "keywords": [
+      "Wealth",
+      "Inheritance",
+      "Family",
+      "Long-Term Success"
+    ],
+    "summary": "A family among ten pentacles, wealth and legacy.",
+    "reading": {
+      "love": "Family and legacy in love.",
+      "career": "Long-term financial success.",
+      "health": "Health passed through generations.",
+      "spirituality": "Spiritual legacy matters."
+    },
+    "affirmation": "I create lasting wealth and legacy.",
+    "action": "Connect with family or build legacy today.",
+    "tiktokCaption": "Building wealth for generations #tarot #legacy #family #abundance"
+  },
+  {
+    "id": 73,
+    "name": "Page of Pentacles",
+    "nameCn": "星币侍从",
+    "keywords": [
+      "Manifestation",
+      "Financial Opportunity",
+      "Skill Development",
+      "Ambition"
+    ],
+    "summary": "A young figure holds pentacle, looking at ground with ambition.",
+    "reading": {
+      "love": "Ambitious about practical love goals.",
+      "career": "New financial opportunity arises.",
+      "health": "Ambition for physical excellence.",
+      "spirituality": "Material and spiritual balance."
+    },
+    "affirmation": "I am committed to manifesting my goals.",
+    "action": "Set one practical goal today.",
+    "tiktokCaption": "Manifesting abundance step by step #tarot #manifestation #goals"
+  },
+  {
+    "id": 74,
+    "name": "Knight of Pentacles",
+    "nameCn": "星币骑士",
+    "keywords": [
+      "Efficiency",
+      "Routine",
+      "Conservative",
+      "Hard Work"
+    ],
+    "summary": "A knight rides slowly with pentacle, steady and reliable.",
+    "reading": {
+      "love": "Steady, reliable love approach.",
+      "career": "Hard work yields results.",
+      "health": "Consistent health routine.",
+      "spirituality": "Steady spiritual practice."
+    },
+    "affirmation": "I steadily work toward my goals.",
+    "action": "Complete one task with full dedication.",
+    "tiktokCaption": "Slow and steady wins the race #tarot #dedication #steadfast"
+  },
+  {
+    "id": 75,
+    "name": "Queen of Pentacles",
+    "nameCn": "星币皇后",
+    "keywords": [
+      "Nurturing",
+      "Practicality",
+      "Abundance",
+      "Security"
+    ],
+    "summary": "A queen sits with pentacle and roses, practical nurturing.",
+    "reading": {
+      "love": "Nurturing and practical love.",
+      "career": "Practical abundance-building.",
+      "health": "Nurturing your physical self.",
+      "spirituality": "Material world supports spirit."
+    },
+    "affirmation": "I nurture myself and others with practical love.",
+    "action": "Nurture something in your environment.",
+    "tiktokCaption": "Nurturing my garden of dreams #tarot #nurturing #abundance"
+  },
+  {
+    "id": 76,
+    "name": "King of Pentacles",
+    "nameCn": "星币国王",
+    "keywords": [
+      "Wealth",
+      "Business",
+      "Leadership",
+      "Security"
+    ],
+    "summary": "A king holds pentacle, representing material mastery and wealth.",
+    "reading": {
+      "love": "Stable, committed love.",
+      "career": "Business success and leadership.",
+      "health": "Material approach to health.",
+      "spirituality": "Spiritual mastery in material world."
+    },
+    "affirmation": "I am the master of my material world.",
+    "action": "Take charge of one practical matter today.",
+    "tiktokCaption": "Building my empire with wisdom #tarot #abundance #leadership #king"
+  }
+]

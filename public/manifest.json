@@ -1,0 +1,27 @@
+{
+  "name": "Wishing Moon - Daily Tarot",
+  "short_name": "WishingMoon",
+  "description": "Daily tarot readings, moon phase tracking, and manifestation rituals",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

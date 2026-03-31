@@ -32,16 +32,15 @@ export interface TarotCard {
   name: string;
   nameCn: string;
   keywords: string[];
-  summary: string;
-  reading: {
-    love: string;
-    career: string;
-    health: string;
-    spirituality: string;
-  };
+  meaning: string;
+  love: string;
+  career: string;
+  health: string;
+  spirituality: string;
   affirmation: string;
-  action: string;
-  tiktokCaption: string;
+  actionSteps: string[];
+  shareText: string;
+  shareHashtags: string;
 }
 
 // ===== Daily Reading Types =====
@@ -53,3 +52,19 @@ export interface DailyReading {
 
 // ===== Navigation =====
 export type NavTab = 'home' | 'draw' | 'collection' | 'profile';
+
+// ===== Supabase Types =====
+export interface DrawRecord {
+  id: string;
+  userId: string;
+  cardId: number;
+  category: 'love' | 'career' | 'health' | 'spirituality';
+  drawnAt: string;
+}
+
+export interface FavoriteRecord {
+  id: string;
+  userId: string;
+  cardId: number;
+  createdAt: string;
+}

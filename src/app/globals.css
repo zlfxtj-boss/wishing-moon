@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --color-primary: #fbbf24;
+  --color-secondary: #a855f7;
+  --color-accent: #ec4899;
+  --color-glow: rgba(251, 191, 36, 0.3);
+  --color-card-bg: rgba(30, 0, 60, 0.6);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --shadow-card: 0 0 20px rgba(251, 191, 36, 0.1);
+  --bg-gradient-main: linear-gradient(180deg, #000000 0%, #0a0015 40%, #05001a 100%);
+  --bg-gradient-card: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(10, 0, 30, 0.9) 100%);
+  --bg-gradient-btn: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  --text-glow: none;
+  --border-glow: 1px solid rgba(251, 191, 36, 0.3);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* CYBERPUNK THEME */
+[data-theme="cyberpunk"] {
+  --color-primary: #fbbf24;
+  --color-secondary: #a855f7;
+  --color-accent: #f472b6;
+  --color-glow: rgba(251, 191, 36, 0.4);
+  --color-card-bg: rgba(10, 0, 30, 0.8);
+  --color-border: rgba(251, 191, 36, 0.2);
+  --shadow-card: 0 0 20px rgba(251, 191, 36, 0.2), 0 0 40px rgba(168, 85, 247, 0.1);
+  --bg-gradient-main: linear-gradient(180deg, #000000 0%, #0a0015 40%, #05001a 100%);
+  --bg-gradient-card: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(10, 0, 30, 0.9) 100%);
+  --bg-gradient-btn: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  --text-glow: 0 0 10px rgba(251, 191, 36, 0.5);
+  --border-glow: 1px solid rgba(251, 191, 36, 0.4);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* OIL PAINTING THEME */
+[data-theme="oil-painting"] {
+  --color-primary: #d4a853;
+  --color-secondary: #8b5e3c;
+  --color-accent: #c46b3f;
+  --color-glow: rgba(212, 168, 83, 0.2);
+  --color-card-bg: rgba(40, 25, 10, 0.85);
+  --color-border: rgba(212, 168, 83, 0.3);
+  --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.5);
+  --bg-gradient-main: linear-gradient(180deg, #1a1207 0%, #2d1f0f 40%, #1a1207 100%);
+  --bg-gradient-card: linear-gradient(135deg, rgba(139, 94, 60, 0.4) 0%, rgba(26, 18, 7, 0.9) 100%);
+  --bg-gradient-btn: linear-gradient(135deg, #d4a853 0%, #b8862a 50%, #8b6914 100%);
+  --text-glow: none;
+  --border-glow: 1px solid rgba(212, 168, 83, 0.4);
 }
 
 body {
-  background: var(--background);
+  background: var(--bg-gradient-main);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
+
+main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* Neon glow */
+[data-theme="cyberpunk"] .text-glow {
+  text-shadow: 0 0 10px var(--color-primary), 0 0 30px rgba(251, 191, 36, 0.3);
+}
+
+/* Neon pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-primary), 0 0 15px rgba(251, 191, 36, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-primary), 0 0 40px rgba(251, 191, 36, 0.5), 0 0 60px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.neon-pulse {
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+/* Card shake animation */
+@keyframes cardShake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  10% { transform: translateX(-8px) rotate(-2deg); }
+  20% { transform: translateX(8px) rotate(2deg); }
+  30% { transform: translateX(-6px) rotate(-1.5deg); }
+  40% { transform: translateX(6px) rotate(1.5deg); }
+  50% { transform: translateX(-4px) rotate(-1deg); }
+  60% { transform: translateX(4px) rotate(1deg); }
+  70% { transform: translateX(-2px) rotate(-0.5deg); }
+  80% { transform: translateX(2px) rotate(0.5deg); }
+  90% { transform: translateX(-1px) rotate(0deg); }
+}
+
+.shake-card {
+  animation: cardShake 1.5s ease-in-out;
+}
+
+/* Cyberpunk starfield background */
+[data-theme="cyberpunk"] {
+  background-image:
+    radial-gradient(1px 1px at 10% 10%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 50%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 30%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 20%, rgba(255,255,255,0.4) 0%, transparent 100%);
+  background-size: 250px 250px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }

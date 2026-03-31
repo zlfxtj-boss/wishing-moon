@@ -1,1465 +1,1852 @@
 [
   {
     "id": 0,
-    "name": "Card 0",
-    "nameCn": "卡0",
+    "name": "The Fool",
+    "nameCn": "愚人",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "New beginnings",
+      "Innocence",
+      "Spontaneity",
+      "Free spirit"
     ],
-    "summary": "Summary for card 0",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 0",
-    "action": "Take action 0",
-    "tiktokCaption": "Caption 0"
+    "affirmation": "I trust the journey, even when I cannot see the destination.",
+    "meaning": "A figure leaps off a cliff with complete trust in the universe.",
+    "love": "A new romance is possible. Be open to unexpected encounters.",
+    "career": "Take a leap of faith in your career.",
+    "health": "Your body is ready for renewal.",
+    "spirituality": "A spiritual awakening is beginning.",
+    "actionSteps": [
+      "Say yes to something spontaneous today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Fool appeared for you! #Tarot #NewBeginnings",
+    "shareHashtags": "#Tarot #TheFool #WishingMoon"
   },
   {
     "id": 1,
-    "name": "Card 1",
-    "nameCn": "卡1",
+    "name": "The Magician",
+    "nameCn": "魔术师",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Manifestation",
+      "Resourcefulness",
+      "Power",
+      "Inspired action"
     ],
-    "summary": "Summary for card 1",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 1",
-    "action": "Take action 1",
-    "tiktokCaption": "Caption 1"
+    "affirmation": "I have everything I need to manifest my desires.",
+    "meaning": "A figure at a table with four magical tools under an infinity symbol.",
+    "love": "You have all the tools you need to create the love you desire.",
+    "career": "Your skills and resources are aligned for success.",
+    "health": "You have the power to manifest better health.",
+    "spirituality": "You are connected to infinite creative potential.",
+    "actionSteps": [
+      "Write down one desire and take one step toward it.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Magician showed up! #Tarot #Manifestation",
+    "shareHashtags": "#Tarot #TheMagician #WishingMoon"
   },
   {
     "id": 2,
-    "name": "Card 2",
-    "nameCn": "卡2",
+    "name": "The High Priestess",
+    "nameCn": "女祭司",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Intuition",
+      "Sacred knowledge",
+      "Divine feminine",
+      "Mystery"
     ],
-    "summary": "Summary for card 2",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 2",
-    "action": "Take action 2",
-    "tiktokCaption": "Caption 2"
+    "affirmation": "I trust my intuition and honor my inner knowing.",
+    "meaning": "A seated woman between two pillars with a crescent moon.",
+    "love": "Trust your intuition about love.",
+    "career": "Look beyond surface-level information.",
+    "health": "Pay attention to your body's subtle signals.",
+    "spirituality": "A deep spiritual download is coming.",
+    "actionSteps": [
+      "Spend 10 minutes in silence and journal.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The High Priestess is calling you to trust your intuition! #Tarot",
+    "shareHashtags": "#Tarot #TheHighPriestess #WishingMoon"
   },
   {
     "id": 3,
-    "name": "Card 3",
-    "nameCn": "卡3",
+    "name": "The Empress",
+    "nameCn": "女皇",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Femininity",
+      "Beauty",
+      "Nature",
+      "Abundance",
+      "Motherhood"
     ],
-    "summary": "Summary for card 3",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 3",
-    "action": "Take action 3",
-    "tiktokCaption": "Caption 3"
+    "affirmation": "I am a vessel of creativity, beauty, and abundant love.",
+    "meaning": "A crowned woman seated on velvet, surrounded by nature.",
+    "love": "A time of nurturing and emotional fullness in relationships.",
+    "career": "Your creative projects are flourishing.",
+    "health": "Nurture your body with care.",
+    "spirituality": "Connect with the divine feminine.",
+    "actionSteps": [
+      "Spend time in nature or create something beautiful.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Empress energy is radiating! #Tarot #Abundance",
+    "shareHashtags": "#Tarot #TheEmpress #WishingMoon"
   },
   {
     "id": 4,
-    "name": "Card 4",
-    "nameCn": "卡4",
+    "name": "The Emperor",
+    "nameCn": "皇帝",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Authority",
+      "Structure",
+      "Control",
+      "Fatherhood",
+      "Stability"
     ],
-    "summary": "Summary for card 4",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 4",
-    "action": "Take action 4",
-    "tiktokCaption": "Caption 4"
+    "affirmation": "I am the architect of my life.",
+    "meaning": "A powerful figure on a throne holding an orb and scepter.",
+    "love": "Establish healthy boundaries in relationships.",
+    "career": "Take charge of your professional life.",
+    "health": "Bring structure to your wellness routine.",
+    "spirituality": "Build a disciplined spiritual practice.",
+    "actionSteps": [
+      "Set one clear goal and make a plan to reach it.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Emperor says: Time to step into your authority! #Tarot",
+    "shareHashtags": "#Tarot #TheEmperor #WishingMoon"
   },
   {
     "id": 5,
-    "name": "Card 5",
-    "nameCn": "卡5",
+    "name": "The Hierophant",
+    "nameCn": "教皇",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Spiritual wisdom",
+      "Tradition",
+      "Conformity",
+      "Education",
+      "Beliefs"
     ],
-    "summary": "Summary for card 5",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 5",
-    "action": "Take action 5",
-    "tiktokCaption": "Caption 5"
+    "affirmation": "I honor the wisdom of those who came before me.",
+    "meaning": "A religious figure blessing five disciples, representing traditional guidance.",
+    "love": "Seek guidance from trusted sources about relationships.",
+    "career": "Education or certification may advance your career.",
+    "health": "Explore traditional healing practices.",
+    "spirituality": "A spiritual teacher or community is coming.",
+    "actionSteps": [
+      "Seek advice from a mentor.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Hierophant appeared! #Tarot #Wisdom",
+    "shareHashtags": "#Tarot #TheHierophant #WishingMoon"
   },
   {
     "id": 6,
-    "name": "Card 6",
-    "nameCn": "卡6",
+    "name": "The Lovers",
+    "nameCn": "恋人",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Love",
+      "Harmony",
+      "Relationships",
+      "Choices",
+      "Alignment"
     ],
-    "summary": "Summary for card 6",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 6",
-    "action": "Take action 6",
-    "tiktokCaption": "Caption 6"
+    "affirmation": "I choose love, and love chooses me in return.",
+    "meaning": "Two figures beneath a radiant sun, representing love and significant choices.",
+    "love": "A significant choice about love is before you.",
+    "career": "A key decision involving partnerships is approaching.",
+    "health": "Your emotional and physical well-being are deeply connected.",
+    "spirituality": "Your soul is being called to align with your inner values.",
+    "actionSteps": [
+      "Make one choice today that aligns with your truest values.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Lovers card is EVERYTHING for your love life! #Tarot #Love",
+    "shareHashtags": "#Tarot #TheLovers #WishingMoon"
   },
   {
     "id": 7,
-    "name": "Card 7",
-    "nameCn": "卡7",
+    "name": "The Chariot",
+    "nameCn": "战车",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Willpower",
+      "Determination",
+      "Control",
+      "Triumph",
+      "Victory"
     ],
-    "summary": "Summary for card 7",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 7",
-    "action": "Take action 7",
-    "tiktokCaption": "Caption 7"
+    "affirmation": "I am focused, determined, and victory is mine.",
+    "meaning": "A warrior drives a chariot pulled by two sphinxes toward victory.",
+    "love": "Harness determination to overcome relationship challenges.",
+    "career": "Your focus and drive will lead to triumph.",
+    "health": "Channel your warrior energy into physical fitness.",
+    "spirituality": "Balance opposing forces within yourself.",
+    "actionSteps": [
+      "Identify one obstacle and commit to overcoming it.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Chariot is driving you toward victory! #Tarot",
+    "shareHashtags": "#Tarot #TheChariot #WishingMoon"
   },
   {
     "id": 8,
-    "name": "Card 8",
-    "nameCn": "卡8",
+    "name": "Strength",
+    "nameCn": "力量",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Inner strength",
+      "Courage",
+      "Persuasion",
+      "Influence",
+      "Compassion"
     ],
-    "summary": "Summary for card 8",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 8",
-    "action": "Take action 8",
-    "tiktokCaption": "Caption 8"
+    "affirmation": "I have the courage and compassion to face anything.",
+    "meaning": "A woman gently opens the mouth of a lion with serene inner power.",
+    "love": "True strength in love comes from compassion, not control.",
+    "career": "Your influence and persuasive abilities are your superpowers.",
+    "health": "Face health challenges with courage.",
+    "spirituality": "The strength you seek is already within you.",
+    "actionSteps": [
+      "Tackle one fear today with gentle, steady courage.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Strength card energy: You are BRAVER than you know! #Tarot",
+    "shareHashtags": "#Tarot #Strength #WishingMoon"
   },
   {
     "id": 9,
-    "name": "Card 9",
-    "nameCn": "卡9",
+    "name": "The Hermit",
+    "nameCn": "隐士",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Soul-searching",
+      "Introspection",
+      "Inner guidance",
+      "Solitude"
     ],
-    "summary": "Summary for card 9",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 9",
-    "action": "Take action 9",
-    "tiktokCaption": "Caption 9"
+    "affirmation": "In solitude, I find the guidance I seek.",
+    "meaning": "An old man holds a lantern that glows with a star, walking alone in wisdom.",
+    "love": "Sometimes solitude leads to the love you seek.",
+    "career": "Step back from the noise. Insights come in stillness.",
+    "health": "Rest and withdrawal may be medicine right now.",
+    "spirituality": "A period of deep inner work has begun.",
+    "actionSteps": [
+      "Spend intentional time alone in reflection.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Hermit is calling you inward... #Tarot",
+    "shareHashtags": "#Tarot #TheHermit #WishingMoon"
   },
   {
     "id": 10,
-    "name": "Card 10",
-    "nameCn": "卡10",
+    "name": "Wheel of Fortune",
+    "nameCn": "命运之轮",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Good luck",
+      "Karma",
+      "Life cycles",
+      "Destiny",
+      "Turn of fortune"
     ],
-    "summary": "Summary for card 10",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 10",
-    "action": "Take action 10",
-    "tiktokCaption": "Caption 10"
+    "affirmation": "I welcome the change that the wheel of fortune brings.",
+    "meaning": "A great wheel rotates with figures rising and falling - fate in motion.",
+    "love": "The wheel of fate is turning in your favor.",
+    "career": "Change is in motion. Embrace the ups and downs.",
+    "health": "Cyclic changes are affecting your health.",
+    "spirituality": "Your destiny is unfolding perfectly.",
+    "actionSteps": [
+      "Release attachment to a specific outcome.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Wheel of Fortune is SPINNING! #Tarot",
+    "shareHashtags": "#Tarot #WheelFortune #WishingMoon"
   },
   {
     "id": 11,
-    "name": "Card 11",
-    "nameCn": "卡11",
+    "name": "Justice",
+    "nameCn": "正义",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Fairness",
+      "Truth",
+      "Law",
+      "Karma",
+      "Cause and effect"
     ],
-    "summary": "Summary for card 11",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 11",
-    "action": "Take action 11",
-    "tiktokCaption": "Caption 11"
+    "affirmation": "I act with integrity and trust that truth prevails.",
+    "meaning": "A robed woman holds a sword and balanced scales.",
+    "love": "Truth and fairness are essential in your relationship.",
+    "career": "Honest dealings bring success.",
+    "health": "Seek balanced, holistic approaches to health.",
+    "spirituality": "Karma is precise. Your actions ripple outward.",
+    "actionSteps": [
+      "Make one decision today based on complete honesty.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Justice says: What you put out there IS coming back to you! #Tarot",
+    "shareHashtags": "#Tarot #Justice #WishingMoon"
   },
   {
     "id": 12,
-    "name": "Card 12",
-    "nameCn": "卡12",
+    "name": "The Hanged Man",
+    "nameCn": "倒吊人",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Pause",
+      "Surrender",
+      "New perspective",
+      "Letting go",
+      "Sacrifice"
     ],
-    "summary": "Summary for card 12",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 12",
-    "action": "Take action 12",
-    "tiktokCaption": "Caption 12"
+    "affirmation": "By letting go, I gain a new perspective on everything.",
+    "meaning": "A man hangs upside down from a cross, calm and serene.",
+    "love": "Surrender the need to control. A new perspective changes everything.",
+    "career": "Pausing now leads to a major breakthrough later.",
+    "health": "Change how you view your health challenge.",
+    "spirituality": "Voluntary sacrifice accelerates your spiritual evolution.",
+    "actionSteps": [
+      "Do something different today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Hanged Man says: What if letting go IS the answer? #Tarot",
+    "shareHashtags": "#Tarot #TheHangedMan #WishingMoon"
   },
   {
     "id": 13,
-    "name": "Card 13",
-    "nameCn": "卡13",
+    "name": "Death",
+    "nameCn": "死神",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Endings",
+      "Transformation",
+      "Transition",
+      "Metamorphosis",
+      "Release"
     ],
-    "summary": "Summary for card 13",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 13",
-    "action": "Take action 13",
-    "tiktokCaption": "Caption 13"
+    "affirmation": "I release what no longer serves me.",
+    "meaning": "A dark armored knight rides over fallen bodies - endings that enable rebirth.",
+    "love": "An old chapter of your love life is ending.",
+    "career": "A major ending clears the path for a new beginning.",
+    "health": "Old patterns dying bring renewed health.",
+    "spirituality": "Death is metamorphosis. Release to be reborn.",
+    "actionSteps": [
+      "Identify one thing you need to let go of.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Death card is about beautiful transformation! #Tarot",
+    "shareHashtags": "#Tarot #Death #WishingMoon"
   },
   {
     "id": 14,
-    "name": "Card 14",
-    "nameCn": "卡14",
+    "name": "Temperance",
+    "nameCn": "节制",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Balance",
+      "Moderation",
+      "Patience",
+      "Purpose",
+      "Meaning"
     ],
-    "summary": "Summary for card 14",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 14",
-    "action": "Take action 14",
-    "tiktokCaption": "Caption 14"
+    "affirmation": "I find balance and peace in the middle of all extremes.",
+    "meaning": "An angel pours liquid between two cups, balancing extremes.",
+    "love": "Balance is key in your relationship.",
+    "career": "Find the middle path in professional challenges.",
+    "health": "Moderation in all things supports healing.",
+    "spirituality": "Your path is one of integration and harmony.",
+    "actionSteps": [
+      "Balance one area today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Temperance is calling you to find BALANCE! #Tarot",
+    "shareHashtags": "#Tarot #Temperance #WishingMoon"
   },
   {
     "id": 15,
-    "name": "Card 15",
-    "nameCn": "卡15",
+    "name": "The Devil",
+    "nameCn": "恶魔",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Shadow self",
+      "Attachment",
+      "Addiction",
+      "Materialism",
+      "Bondage"
     ],
-    "summary": "Summary for card 15",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 15",
-    "action": "Take action 15",
-    "tiktokCaption": "Caption 15"
+    "affirmation": "I am free from chains that no longer serve my highest good.",
+    "meaning": "A devil sits atop a pedestal with chained figures bound at its feet.",
+    "love": "Examine attachments that bind you in love.",
+    "career": "Watch for materialistic traps or toxic environments.",
+    "health": "Addictive patterns may be affecting your health.",
+    "spirituality": "Face your shadow self with courage.",
+    "actionSteps": [
+      "Identify one attachment that limits you.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Devil card is showing you where you feel trapped... #Tarot",
+    "shareHashtags": "#Tarot #TheDevil #WishingMoon"
   },
   {
     "id": 16,
-    "name": "Card 16",
-    "nameCn": "卡16",
+    "name": "The Tower",
+    "nameCn": "塔",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Sudden change",
+      "Upheaval",
+      "Revelation",
+      "Awakening",
+      "Chaos"
     ],
-    "summary": "Summary for card 16",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 16",
-    "action": "Take action 16",
-    "tiktokCaption": "Caption 16"
+    "affirmation": "I welcome the collapse of what was never truly mine.",
+    "meaning": "A tower struck by lightning, figures falling - dramatic sudden revelation.",
+    "love": "A sudden revelation may shake your relationship.",
+    "career": "Unexpected upheaval at work may be painful but liberating.",
+    "health": "A sudden health awareness prompts necessary change.",
+    "spirituality": "A dramatic awakening is occurring.",
+    "actionSteps": [
+      "Allow change to happen.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Tower is SHAKING things up! #Tarot",
+    "shareHashtags": "#Tarot #TheTower #WishingMoon"
   },
   {
     "id": 17,
-    "name": "Card 17",
-    "nameCn": "卡17",
+    "name": "The Star",
+    "nameCn": "星星",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Hope",
+      "Faith",
+      "Purpose",
+      "Renewal",
+      "Inspiration"
     ],
-    "summary": "Summary for card 17",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 17",
-    "action": "Take action 17",
-    "tiktokCaption": "Caption 17"
+    "affirmation": "I am filled with hope and guided by the light within me.",
+    "meaning": "A woman kneels by water pouring from two cups under a vast starry sky.",
+    "love": "After turmoil comes healing. Hope and faith in love are your guiding stars.",
+    "career": "Inspiration flows freely. Your creative gifts can help many.",
+    "health": "Healing waters are flowing to you.",
+    "spirituality": "Your connection to the divine is strong.",
+    "actionSteps": [
+      "Pour your energy into one creative project today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "After the storm comes the Star! #Tarot #Hope",
+    "shareHashtags": "#Tarot #TheStar #WishingMoon"
   },
   {
     "id": 18,
-    "name": "Card 18",
-    "nameCn": "卡18",
+    "name": "The Moon",
+    "nameCn": "月亮",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Illusion",
+      "Fear",
+      "Anxiety",
+      "Unconscious",
+      "Intuition"
     ],
-    "summary": "Summary for card 18",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 18",
-    "action": "Take action 18",
-    "tiktokCaption": "Caption 18"
+    "affirmation": "I move through fear with the light of my own intuition.",
+    "meaning": "A wolf and dog howl beneath a full moon as a crayfish emerges from water.",
+    "love": "Hidden emotions may be surfacing.",
+    "career": "Things may not be as they appear professionally.",
+    "health": "Fear-based thinking may be affecting your health.",
+    "spirituality": "The unconscious is revealing deep truths.",
+    "actionSteps": [
+      "Journal any fears or anxieties without judgment.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Moon is asking you to trust your intuition... #Tarot",
+    "shareHashtags": "#Tarot #TheMoon #WishingMoon"
   },
   {
     "id": 19,
-    "name": "Card 19",
-    "nameCn": "卡19",
+    "name": "The Sun",
+    "nameCn": "太阳",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Positivity",
+      "Success",
+      "Vitality",
+      "Joy",
+      "Freedom"
     ],
-    "summary": "Summary for card 19",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 19",
-    "action": "Take action 19",
-    "tiktokCaption": "Caption 19"
+    "affirmation": "I bask in the warmth of my own radiant joy and success.",
+    "meaning": "A golden sun radiates over a child on a white horse with a red flag.",
+    "love": "Pure joy and vitality flood your relationships.",
+    "career": "Success and recognition are shining on you.",
+    "health": "Excellent health energy flows through you.",
+    "spirituality": "Your spirit is illuminated.",
+    "actionSteps": [
+      "Do something that genuinely makes you happy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The Sun is SHINING on you! #Tarot #Sunshine",
+    "shareHashtags": "#Tarot #TheSun #WishingMoon"
   },
   {
     "id": 20,
-    "name": "Card 20",
-    "nameCn": "卡20",
+    "name": "Judgement",
+    "nameCn": "审判",
     "keywords": [
-      "Keyword1",
-      "Keyword2"
+      "Judgement",
+      "Rebirth",
+      "Inner calling",
+      "Absolution",
+      "Renewal"
     ],
-    "summary": "Summary for card 20",
-    "reading": {
-      "love": "Love reading",
-      "career": "Career reading",
-      "health": "Health reading",
-      "spirituality": "Spiritual reading"
-    },
-    "affirmation": "My affirmation 20",
-    "action": "Take action 20",
-    "tiktokCaption": "Caption 20"
+    "affirmation": "I answer the call to be reborn into my highest self.",
+    "meaning": "An angel blows a trumpet as figures rise from graves, arms open to the sky.",
+    "love": "A call to evaluate your love life with compassion.",
+    "career": "Your past work is being recognized.",
+    "health": "Your body is calling for a complete renewal.",
+    "spirituality": "You are being called to a higher version of yourself.",
+    "actionSteps": [
+      "Reflect on a past decision and absolve yourself.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Judgement card is calling you to RISE! #Tarot",
+    "shareHashtags": "#Tarot #Judgement #WishingMoon"
   },
   {
     "id": 21,
-    "name": "Wand 1",
-    "nameCn": "权杖1",
+    "name": "The World",
+    "nameCn": "世界",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Completion",
+      "Integration",
+      "Achievement",
+      "Travel",
+      "Celebration"
     ],
-    "summary": "Wand card 1",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I celebrate the completion of this cycle.",
+    "meaning": "A dancer moves within a wreath of laurels, completing a great cycle.",
+    "love": "A major cycle of love is completing beautifully.",
+    "career": "You have achieved what you set out to do.",
+    "health": "Full integration and well-being are yours.",
+    "spirituality": "A profound completion of a spiritual cycle.",
+    "actionSteps": [
+      "Acknowledge one major accomplishment.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "The World card - completion energy is OFF THE CHARTS! #Tarot",
+    "shareHashtags": "#Tarot #TheWorld #WishingMoon"
   },
   {
     "id": 22,
-    "name": "Wand 2",
-    "nameCn": "权杖2",
+    "name": "Ace of Wands",
+    "nameCn": "权杖 Ace",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 2",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of Ace of Wands with openness and purpose.",
+    "meaning": "The Ace of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Ace of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #AceWands #WishingMoon"
   },
   {
     "id": 23,
-    "name": "Wand 3",
-    "nameCn": "权杖3",
+    "name": "2 of Wands",
+    "nameCn": "权杖 2",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 3",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 2 of Wands with openness and purpose.",
+    "meaning": "The 2 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "2 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #2Wands #WishingMoon"
   },
   {
     "id": 24,
-    "name": "Wand 4",
-    "nameCn": "权杖4",
+    "name": "3 of Wands",
+    "nameCn": "权杖 3",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 4",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 3 of Wands with openness and purpose.",
+    "meaning": "The 3 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "3 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #3Wands #WishingMoon"
   },
   {
     "id": 25,
-    "name": "Wand 5",
-    "nameCn": "权杖5",
+    "name": "4 of Wands",
+    "nameCn": "权杖 4",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 5",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 4 of Wands with openness and purpose.",
+    "meaning": "The 4 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "4 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #4Wands #WishingMoon"
   },
   {
     "id": 26,
-    "name": "Wand 6",
-    "nameCn": "权杖6",
+    "name": "5 of Wands",
+    "nameCn": "权杖 5",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 6",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 5 of Wands with openness and purpose.",
+    "meaning": "The 5 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "5 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #5Wands #WishingMoon"
   },
   {
     "id": 27,
-    "name": "Wand 7",
-    "nameCn": "权杖7",
+    "name": "6 of Wands",
+    "nameCn": "权杖 6",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 7",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 6 of Wands with openness and purpose.",
+    "meaning": "The 6 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "6 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #6Wands #WishingMoon"
   },
   {
     "id": 28,
-    "name": "Wand 8",
-    "nameCn": "权杖8",
+    "name": "7 of Wands",
+    "nameCn": "权杖 7",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 8",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 7 of Wands with openness and purpose.",
+    "meaning": "The 7 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "7 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #7Wands #WishingMoon"
   },
   {
     "id": 29,
-    "name": "Wand 9",
-    "nameCn": "权杖9",
+    "name": "8 of Wands",
+    "nameCn": "权杖 8",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 9",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 8 of Wands with openness and purpose.",
+    "meaning": "The 8 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "8 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #8Wands #WishingMoon"
   },
   {
     "id": 30,
-    "name": "Wand 10",
-    "nameCn": "权杖10",
+    "name": "9 of Wands",
+    "nameCn": "权杖 9",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 10",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 9 of Wands with openness and purpose.",
+    "meaning": "The 9 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "9 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #9Wands #WishingMoon"
   },
   {
     "id": 31,
-    "name": "Wand 11",
-    "nameCn": "权杖11",
+    "name": "10 of Wands",
+    "nameCn": "权杖 10",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Passion",
+      "Inspiration",
+      "Drive"
     ],
-    "summary": "Wand card 11",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 10 of Wands with openness and purpose.",
+    "meaning": "The 10 of Wands card represents new beginnings and potential in the Wands suit.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Take one creative action aligned with wands energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "10 of Wands appeared for you! Wands energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #10Wands #WishingMoon"
   },
   {
     "id": 32,
-    "name": "Wand 12",
-    "nameCn": "权杖12",
+    "name": "Page of Wands",
+    "nameCn": "权杖 Page",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Enthusiasm",
+      "Adventure",
+      "Confidence",
+      "Leadership"
     ],
-    "summary": "Wand card 12",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the page energy of wands with grace.",
+    "meaning": "The Page of Wands represents the page archetype.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Act from the page archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Page of Wands energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #PageWands #WishingMoon"
   },
   {
     "id": 33,
-    "name": "Wand 13",
-    "nameCn": "权杖13",
+    "name": "Knight of Wands",
+    "nameCn": "权杖 Knight",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Enthusiasm",
+      "Adventure",
+      "Confidence",
+      "Leadership"
     ],
-    "summary": "Wand card 13",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the knight energy of wands with grace.",
+    "meaning": "The Knight of Wands represents the knight archetype.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Act from the knight archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Knight of Wands energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KnightWands #WishingMoon"
   },
   {
     "id": 34,
-    "name": "Wand 14",
-    "nameCn": "权杖14",
+    "name": "Queen of Wands",
+    "nameCn": "权杖 Queen",
     "keywords": [
-      "Wands",
-      "Fire"
+      "Enthusiasm",
+      "Adventure",
+      "Confidence",
+      "Leadership"
     ],
-    "summary": "Wand card 14",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the queen energy of wands with grace.",
+    "meaning": "The Queen of Wands represents the queen archetype.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Act from the queen archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Queen of Wands energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #QueenWands #WishingMoon"
   },
   {
     "id": 35,
-    "name": "Cup 1",
-    "nameCn": "圣杯1",
+    "name": "King of Wands",
+    "nameCn": "权杖 King",
     "keywords": [
-      "Cups",
-      "Water"
+      "Enthusiasm",
+      "Adventure",
+      "Confidence",
+      "Leadership"
     ],
-    "summary": "Cup card 1",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the king energy of wands with grace.",
+    "meaning": "The King of Wands represents the king archetype.",
+    "love": "Passion and creative energy infuse your romantic life.",
+    "career": "Creative projects and new ventures are highlighted.",
+    "health": "Vital energy and physical drive are strong.",
+    "spirituality": "Your inner fire illuminates your spiritual path.",
+    "actionSteps": [
+      "Act from the king archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "King of Wands energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KingWands #WishingMoon"
   },
   {
     "id": 36,
-    "name": "Cup 2",
-    "nameCn": "圣杯2",
+    "name": "Ace of Cups",
+    "nameCn": "圣杯 Ace",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 2",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of Ace of Cups with openness and purpose.",
+    "meaning": "The Ace of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Ace of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #AceCups #WishingMoon"
   },
   {
     "id": 37,
-    "name": "Cup 3",
-    "nameCn": "圣杯3",
+    "name": "2 of Cups",
+    "nameCn": "圣杯 2",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 3",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 2 of Cups with openness and purpose.",
+    "meaning": "The 2 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "2 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #2Cups #WishingMoon"
   },
   {
     "id": 38,
-    "name": "Cup 4",
-    "nameCn": "圣杯4",
+    "name": "3 of Cups",
+    "nameCn": "圣杯 3",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 4",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 3 of Cups with openness and purpose.",
+    "meaning": "The 3 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "3 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #3Cups #WishingMoon"
   },
   {
     "id": 39,
-    "name": "Cup 5",
-    "nameCn": "圣杯5",
+    "name": "4 of Cups",
+    "nameCn": "圣杯 4",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 5",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 4 of Cups with openness and purpose.",
+    "meaning": "The 4 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "4 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #4Cups #WishingMoon"
   },
   {
     "id": 40,
-    "name": "Cup 6",
-    "nameCn": "圣杯6",
+    "name": "5 of Cups",
+    "nameCn": "圣杯 5",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 6",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 5 of Cups with openness and purpose.",
+    "meaning": "The 5 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "5 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #5Cups #WishingMoon"
   },
   {
     "id": 41,
-    "name": "Cup 7",
-    "nameCn": "圣杯7",
+    "name": "6 of Cups",
+    "nameCn": "圣杯 6",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 7",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 6 of Cups with openness and purpose.",
+    "meaning": "The 6 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "6 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #6Cups #WishingMoon"
   },
   {
     "id": 42,
-    "name": "Cup 8",
-    "nameCn": "圣杯8",
+    "name": "7 of Cups",
+    "nameCn": "圣杯 7",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 8",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 7 of Cups with openness and purpose.",
+    "meaning": "The 7 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "7 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #7Cups #WishingMoon"
   },
   {
     "id": 43,
-    "name": "Cup 9",
-    "nameCn": "圣杯9",
+    "name": "8 of Cups",
+    "nameCn": "圣杯 8",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 9",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 8 of Cups with openness and purpose.",
+    "meaning": "The 8 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "8 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #8Cups #WishingMoon"
   },
   {
     "id": 44,
-    "name": "Cup 10",
-    "nameCn": "圣杯10",
+    "name": "9 of Cups",
+    "nameCn": "圣杯 9",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 10",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 9 of Cups with openness and purpose.",
+    "meaning": "The 9 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "9 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #9Cups #WishingMoon"
   },
   {
     "id": 45,
-    "name": "Cup 11",
-    "nameCn": "圣杯11",
+    "name": "10 of Cups",
+    "nameCn": "圣杯 10",
     "keywords": [
-      "Cups",
-      "Water"
+      "Emotion",
+      "Love",
+      "Intuition"
     ],
-    "summary": "Cup card 11",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 10 of Cups with openness and purpose.",
+    "meaning": "The 10 of Cups card represents new beginnings and potential in the Cups suit.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Take one creative action aligned with cups energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "10 of Cups appeared for you! Cups energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #10Cups #WishingMoon"
   },
   {
     "id": 46,
-    "name": "Cup 12",
-    "nameCn": "圣杯12",
+    "name": "Page of Cups",
+    "nameCn": "圣杯 Page",
     "keywords": [
-      "Cups",
-      "Water"
+      "Intuition",
+      "Romance",
+      "Nurturing",
+      "Diplomacy"
     ],
-    "summary": "Cup card 12",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the page energy of cups with grace.",
+    "meaning": "The Page of Cups represents the page archetype.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Act from the page archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Page of Cups energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #PageCups #WishingMoon"
   },
   {
     "id": 47,
-    "name": "Cup 13",
-    "nameCn": "圣杯13",
+    "name": "Knight of Cups",
+    "nameCn": "圣杯 Knight",
     "keywords": [
-      "Cups",
-      "Water"
+      "Intuition",
+      "Romance",
+      "Nurturing",
+      "Diplomacy"
     ],
-    "summary": "Cup card 13",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the knight energy of cups with grace.",
+    "meaning": "The Knight of Cups represents the knight archetype.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Act from the knight archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Knight of Cups energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KnightCups #WishingMoon"
   },
   {
     "id": 48,
-    "name": "Cup 14",
-    "nameCn": "圣杯14",
+    "name": "Queen of Cups",
+    "nameCn": "圣杯 Queen",
     "keywords": [
-      "Cups",
-      "Water"
+      "Intuition",
+      "Romance",
+      "Nurturing",
+      "Diplomacy"
     ],
-    "summary": "Cup card 14",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the queen energy of cups with grace.",
+    "meaning": "The Queen of Cups represents the queen archetype.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Act from the queen archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Queen of Cups energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #QueenCups #WishingMoon"
   },
   {
     "id": 49,
-    "name": "Sword 1",
-    "nameCn": "宝剑1",
+    "name": "King of Cups",
+    "nameCn": "圣杯 King",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intuition",
+      "Romance",
+      "Nurturing",
+      "Diplomacy"
     ],
-    "summary": "Sword card 1",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the king energy of cups with grace.",
+    "meaning": "The King of Cups represents the king archetype.",
+    "love": "Deep emotional currents are flowing in your love life.",
+    "career": "Emotional intelligence and creativity are your strengths.",
+    "health": "Your emotional world affects your physical well-being.",
+    "spirituality": "Your heart opens to deeper spiritual connection.",
+    "actionSteps": [
+      "Act from the king archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "King of Cups energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KingCups #WishingMoon"
   },
   {
     "id": 50,
-    "name": "Sword 2",
-    "nameCn": "宝剑2",
+    "name": "Ace of Swords",
+    "nameCn": "宝剑 Ace",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 2",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of Ace of Swords with openness and purpose.",
+    "meaning": "The Ace of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Ace of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #AceSwords #WishingMoon"
   },
   {
     "id": 51,
-    "name": "Sword 3",
-    "nameCn": "宝剑3",
+    "name": "2 of Swords",
+    "nameCn": "宝剑 2",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 3",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 2 of Swords with openness and purpose.",
+    "meaning": "The 2 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "2 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #2Swords #WishingMoon"
   },
   {
     "id": 52,
-    "name": "Sword 4",
-    "nameCn": "宝剑4",
+    "name": "3 of Swords",
+    "nameCn": "宝剑 3",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 4",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 3 of Swords with openness and purpose.",
+    "meaning": "The 3 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "3 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #3Swords #WishingMoon"
   },
   {
     "id": 53,
-    "name": "Sword 5",
-    "nameCn": "宝剑5",
+    "name": "4 of Swords",
+    "nameCn": "宝剑 4",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 5",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 4 of Swords with openness and purpose.",
+    "meaning": "The 4 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "4 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #4Swords #WishingMoon"
   },
   {
     "id": 54,
-    "name": "Sword 6",
-    "nameCn": "宝剑6",
+    "name": "5 of Swords",
+    "nameCn": "宝剑 5",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 6",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 5 of Swords with openness and purpose.",
+    "meaning": "The 5 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "5 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #5Swords #WishingMoon"
   },
   {
     "id": 55,
-    "name": "Sword 7",
-    "nameCn": "宝剑7",
+    "name": "6 of Swords",
+    "nameCn": "宝剑 6",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 7",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 6 of Swords with openness and purpose.",
+    "meaning": "The 6 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "6 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #6Swords #WishingMoon"
   },
   {
     "id": 56,
-    "name": "Sword 8",
-    "nameCn": "宝剑8",
+    "name": "7 of Swords",
+    "nameCn": "宝剑 7",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 8",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 7 of Swords with openness and purpose.",
+    "meaning": "The 7 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "7 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #7Swords #WishingMoon"
   },
   {
     "id": 57,
-    "name": "Sword 9",
-    "nameCn": "宝剑9",
+    "name": "8 of Swords",
+    "nameCn": "宝剑 8",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 9",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 8 of Swords with openness and purpose.",
+    "meaning": "The 8 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "8 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #8Swords #WishingMoon"
   },
   {
     "id": 58,
-    "name": "Sword 10",
-    "nameCn": "宝剑10",
+    "name": "9 of Swords",
+    "nameCn": "宝剑 9",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 10",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 9 of Swords with openness and purpose.",
+    "meaning": "The 9 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "9 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #9Swords #WishingMoon"
   },
   {
     "id": 59,
-    "name": "Sword 11",
-    "nameCn": "宝剑11",
+    "name": "10 of Swords",
+    "nameCn": "宝剑 10",
     "keywords": [
-      "Swords",
-      "Air"
+      "Intellect",
+      "Communication",
+      "Truth"
     ],
-    "summary": "Sword card 11",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 10 of Swords with openness and purpose.",
+    "meaning": "The 10 of Swords card represents new beginnings and potential in the Swords suit.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Take one creative action aligned with swords energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "10 of Swords appeared for you! Swords energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #10Swords #WishingMoon"
   },
   {
     "id": 60,
-    "name": "Sword 12",
-    "nameCn": "宝剑12",
+    "name": "Page of Swords",
+    "nameCn": "宝剑 Page",
     "keywords": [
-      "Swords",
-      "Air"
+      "Ambition",
+      "Action",
+      "Power",
+      "Justice"
     ],
-    "summary": "Sword card 12",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the page energy of swords with grace.",
+    "meaning": "The Page of Swords represents the page archetype.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Act from the page archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Page of Swords energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #PageSwords #WishingMoon"
   },
   {
     "id": 61,
-    "name": "Sword 13",
-    "nameCn": "宝剑13",
+    "name": "Knight of Swords",
+    "nameCn": "宝剑 Knight",
     "keywords": [
-      "Swords",
-      "Air"
+      "Ambition",
+      "Action",
+      "Power",
+      "Justice"
     ],
-    "summary": "Sword card 13",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the knight energy of swords with grace.",
+    "meaning": "The Knight of Swords represents the knight archetype.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Act from the knight archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Knight of Swords energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KnightSwords #WishingMoon"
   },
   {
     "id": 62,
-    "name": "Sword 14",
-    "nameCn": "宝剑14",
+    "name": "Queen of Swords",
+    "nameCn": "宝剑 Queen",
     "keywords": [
-      "Swords",
-      "Air"
+      "Ambition",
+      "Action",
+      "Power",
+      "Justice"
     ],
-    "summary": "Sword card 14",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the queen energy of swords with grace.",
+    "meaning": "The Queen of Swords represents the queen archetype.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Act from the queen archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Queen of Swords energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #QueenSwords #WishingMoon"
   },
   {
     "id": 63,
-    "name": "Pentacle 1",
-    "nameCn": "星币1",
+    "name": "King of Swords",
+    "nameCn": "宝剑 King",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Ambition",
+      "Action",
+      "Power",
+      "Justice"
     ],
-    "summary": "Pentacle card 1",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the king energy of swords with grace.",
+    "meaning": "The King of Swords represents the king archetype.",
+    "love": "Clear thinking helps your relationships.",
+    "career": "Mental clarity and sharp communication are your assets.",
+    "health": "Mental tension may affect your body.",
+    "spirituality": "Truth cuts through illusion.",
+    "actionSteps": [
+      "Act from the king archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "King of Swords energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KingSwords #WishingMoon"
   },
   {
     "id": 64,
-    "name": "Pentacle 2",
-    "nameCn": "星币2",
+    "name": "Ace of Pentacles",
+    "nameCn": "星币 Ace",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 2",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of Ace of Pentacles with openness and purpose.",
+    "meaning": "The Ace of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Ace of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #AcePentacles #WishingMoon"
   },
   {
     "id": 65,
-    "name": "Pentacle 3",
-    "nameCn": "星币3",
+    "name": "2 of Pentacles",
+    "nameCn": "星币 2",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 3",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 2 of Pentacles with openness and purpose.",
+    "meaning": "The 2 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "2 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #2Pentacles #WishingMoon"
   },
   {
     "id": 66,
-    "name": "Pentacle 4",
-    "nameCn": "星币4",
+    "name": "3 of Pentacles",
+    "nameCn": "星币 3",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 4",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 3 of Pentacles with openness and purpose.",
+    "meaning": "The 3 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "3 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #3Pentacles #WishingMoon"
   },
   {
     "id": 67,
-    "name": "Pentacle 5",
-    "nameCn": "星币5",
+    "name": "4 of Pentacles",
+    "nameCn": "星币 4",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 5",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 4 of Pentacles with openness and purpose.",
+    "meaning": "The 4 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "4 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #4Pentacles #WishingMoon"
   },
   {
     "id": 68,
-    "name": "Pentacle 6",
-    "nameCn": "星币6",
+    "name": "5 of Pentacles",
+    "nameCn": "星币 5",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 6",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 5 of Pentacles with openness and purpose.",
+    "meaning": "The 5 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "5 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #5Pentacles #WishingMoon"
   },
   {
     "id": 69,
-    "name": "Pentacle 7",
-    "nameCn": "星币7",
+    "name": "6 of Pentacles",
+    "nameCn": "星币 6",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 7",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 6 of Pentacles with openness and purpose.",
+    "meaning": "The 6 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "6 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #6Pentacles #WishingMoon"
   },
   {
     "id": 70,
-    "name": "Pentacle 8",
-    "nameCn": "星币8",
+    "name": "7 of Pentacles",
+    "nameCn": "星币 7",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 8",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 7 of Pentacles with openness and purpose.",
+    "meaning": "The 7 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "7 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #7Pentacles #WishingMoon"
   },
   {
     "id": 71,
-    "name": "Pentacle 9",
-    "nameCn": "星币9",
+    "name": "8 of Pentacles",
+    "nameCn": "星币 8",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 9",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 8 of Pentacles with openness and purpose.",
+    "meaning": "The 8 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "8 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #8Pentacles #WishingMoon"
   },
   {
     "id": 72,
-    "name": "Pentacle 10",
-    "nameCn": "星币10",
+    "name": "9 of Pentacles",
+    "nameCn": "星币 9",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 10",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 9 of Pentacles with openness and purpose.",
+    "meaning": "The 9 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "9 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #9Pentacles #WishingMoon"
   },
   {
     "id": 73,
-    "name": "Pentacle 11",
-    "nameCn": "星币11",
+    "name": "10 of Pentacles",
+    "nameCn": "星币 10",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Material",
+      "Work",
+      "Abundance"
     ],
-    "summary": "Pentacle card 11",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embrace the energy of 10 of Pentacles with openness and purpose.",
+    "meaning": "The 10 of Pentacles card represents new beginnings and potential in the Pentacles suit.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Take one creative action aligned with pentacles energy today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "10 of Pentacles appeared for you! Pentacles energy is strong! #Tarot",
+    "shareHashtags": "#Tarot #10Pentacles #WishingMoon"
   },
   {
     "id": 74,
-    "name": "Pentacle 12",
-    "nameCn": "星币12",
+    "name": "Page of Pentacles",
+    "nameCn": "星币 Page",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Security",
+      "Efficiency",
+      "Luxury",
+      "Generosity"
     ],
-    "summary": "Pentacle card 12",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the page energy of pentacles with grace.",
+    "meaning": "The Page of Pentacles represents the page archetype.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Act from the page archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Page of Pentacles energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #PagePentacles #WishingMoon"
   },
   {
     "id": 75,
-    "name": "Pentacle 13",
-    "nameCn": "星币13",
+    "name": "Knight of Pentacles",
+    "nameCn": "星币 Knight",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Security",
+      "Efficiency",
+      "Luxury",
+      "Generosity"
     ],
-    "summary": "Pentacle card 13",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the knight energy of pentacles with grace.",
+    "meaning": "The Knight of Pentacles represents the knight archetype.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Act from the knight archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Knight of Pentacles energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KnightPentacles #WishingMoon"
   },
   {
     "id": 76,
-    "name": "Pentacle 14",
-    "nameCn": "星币14",
+    "name": "Queen of Pentacles",
+    "nameCn": "星币 Queen",
     "keywords": [
-      "Pentacles",
-      "Earth"
+      "Security",
+      "Efficiency",
+      "Luxury",
+      "Generosity"
     ],
-    "summary": "Pentacle card 14",
-    "reading": {
-      "love": "Love",
-      "career": "Career",
-      "health": "Health",
-      "spirituality": "Spirit"
-    },
-    "affirmation": "Affirmation",
-    "action": "Action",
-    "tiktokCaption": "Caption"
+    "affirmation": "I embody the queen energy of pentacles with grace.",
+    "meaning": "The Queen of Pentacles represents the queen archetype.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Act from the queen archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "Queen of Pentacles energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #QueenPentacles #WishingMoon"
+  },
+  {
+    "id": 77,
+    "name": "King of Pentacles",
+    "nameCn": "星币 King",
+    "keywords": [
+      "Security",
+      "Efficiency",
+      "Luxury",
+      "Generosity"
+    ],
+    "affirmation": "I embody the king energy of pentacles with grace.",
+    "meaning": "The King of Pentacles represents the king archetype.",
+    "love": "Practical matters support your relationship stability.",
+    "career": "Your work and material world are highlighted.",
+    "health": "Focus on practical health habits and routines.",
+    "spirituality": "The sacred in the everyday becomes visible to you.",
+    "actionSteps": [
+      "Act from the king archetype today.",
+      "Reflect on how this card relates to your current situation",
+      "Take inspired action today"
+    ],
+    "shareText": "King of Pentacles energy is with you! #Tarot #CourtCards",
+    "shareHashtags": "#Tarot #KingPentacles #WishingMoon"
   }
 ]

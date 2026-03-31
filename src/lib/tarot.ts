@@ -13,21 +13,23 @@ export function getRandomTarotCard(): TarotCard {
 
 export function getCardsByArcana(arcana: 'major' | 'minor'): TarotCard[] {
   if (arcana === 'major') {
-    return tarotCards.filter(card => card.id >= 0 && card.id <= 20);
+    // Major Arcana: IDs 0-21 (22 cards including The World)
+    return tarotCards.filter(card => card.id >= 0 && card.id <= 21);
   }
-  return tarotCards.filter(card => card.id >= 21 && card.id <= 76);
+  // Minor Arcana: IDs 22-77 (56 cards)
+  return tarotCards.filter(card => card.id >= 22 && card.id <= 77);
 }
 
 export function getCardsBySuit(suit: 'wands' | 'cups' | 'swords' | 'pentacles'): TarotCard[] {
   const ranges: Record<string, [number, number]> = {
-    wands: [21, 34],
-    cups: [35, 48],
-    swords: [49, 62],
-    pentacles: [63, 76],
+    wands: [22, 35],    // 10 numbered + Page, Knight, Queen, King = 14 cards
+    cups: [36, 49],      // 10 numbered + Page, Knight, Queen, King = 14 cards
+    swords: [50, 63],   // 10 numbered + Page, Knight, Queen, King = 14 cards
+    pentacles: [64, 77], // 10 numbered + Page, Knight, Queen, King = 14 cards
   };
   const [start, end] = ranges[suit];
   return tarotCards.filter(card => card.id >= start && card.id <= end);
 }
 
-export const MAJOR_ARCANA_IDS = Array.from({ length: 21 }, (_, i) => i);
-export const MINOR_ARCANA_IDS = Array.from({ length: 56 }, (_, i) => i + 21);
+export const MAJOR_ARCANA_IDS = Array.from({ length: 22 }, (_, i) => i);
+export const MINOR_ARCANA_IDS = Array.from({ length: 56 }, (_, i) => i + 22);
