@@ -3,15 +3,53 @@ import { createClient } from '@/lib/supabase-server'
 import { getRandomTarotCard, getTarotCardById } from '@/lib/tarot'
 import { getMoonPhase } from '@/lib/moon-phase'
 
+const MAX_DAILY_DRAWS = 3
+
 export async function GET(request: NextRequest) {
   try {
-    const card = getRandomTarotCard()
-    const moonPhase = getMoonPhase()
-
-    return NextResponse.json({ card, moonPhase })
+    // Check daily draw count for authenticated users
+    const supabase = await createClient()
+    
+    if (supabase) {
+      const { data: { user } } = await supabase.auth.getUser()
+      
+      if (user) {
+        const today = new Date().toISOString().split('T')[0]
+        
+        // Get total draws for today
+        const { data: todayDraws } = await supabase
+          .from('daily_draws')
+          .select('draw_count')
+          .eq('user_id', user.id)
+          .eq('draw_date', today)
+        
+        const totalDrawsToday = todayDraws?.reduce((sum: number, d: any) => sum + (d.draw_count || 0), 0) || 0
+        const remainingDraws = Math.max(0, MAX_DAILY_DRAWS - totalDrawsToday)
+        
+        return NextResponse.json({ 
+          remainingDraws,
+          maxDraws: MAX_DAILY_DRAWS,
+          totalDrawsToday,
+          limitReached: remainingDraws <= 0
+        })
+      }
+    }
+    
+    // Not authenticated - assume unlimited (or restrict on client side)
+    return NextResponse.json({ 
+      remainingDraws: MAX_DAILY_DRAWS,
+      maxDraws: MAX_DAILY_DRAWS,
+      totalDrawsToday: 0,
+      limitReached: false
+    })
   } catch (error) {
-    console.error('Draw API error:', error)
-    return NextResponse.json({ error: 'Failed to draw card' }, { status: 500 })
+    console.error('Draw count check error:', error)
+    return NextResponse.json({ 
+      remainingDraws: MAX_DAILY_DRAWS,
+      maxDraws: MAX_DAILY_DRAWS,
+      totalDrawsToday: 0,
+      limitReached: false
+    })
   }
 }
 
@@ -43,34 +81,47 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Card not found' }, { status: 404 })
     }
 
-    // Check if user already drew this card today
+    // Check if user has reached daily limit
     const today = new Date().toISOString().split('T')[0]
-    const { data: existingDraw } = await supabase
+    
+    const { data: existingDraws } = await supabase
       .from('daily_draws')
-      .select('*')
+      .select('id, draw_count')
       .eq('user_id', user.id)
-      .eq('card_id', cardId)
       .eq('draw_date', today)
-      .single()
-
-    if (existingDraw) {
-      // Update draw count
-      await supabase
-        .from('daily_draws')
-        .update({ draw_count: existingDraw.draw_count + 1, category })
-        .eq('id', existingDraw.id)
-    } else {
-      // Insert new draw
-      await supabase.from('daily_draws').insert({
-        user_id: user.id,
-        card_id: cardId,
-        draw_date: today,
-        category,
-        draw_count: 1,
-      })
+    
+    const totalDrawsToday = existingDraws?.reduce((sum: number, d: any) => sum + (d.draw_count || 0), 0) || 0
+    
+    if (totalDrawsToday >= MAX_DAILY_DRAWS) {
+      return NextResponse.json({ 
+        error: 'Daily draw limit reached',
+        remainingDraws: 0,
+        limitReached: true
+      }, { status: 429 })
     }
 
-    return NextResponse.json({ success: true, card })
+    // Insert new draw record
+    const { error: insertError } = await supabase.from('daily_draws').insert({
+      user_id: user.id,
+      card_id: cardId,
+      draw_date: today,
+      category,
+      draw_count: 1,
+    })
+
+    if (insertError) {
+      console.error('Insert draw error:', insertError)
+      return NextResponse.json({ error: 'Failed to record draw' }, { status: 500 })
+    }
+
+    const remainingDraws = MAX_DAILY_DRAWS - totalDrawsToday - 1
+
+    return NextResponse.json({ 
+      success: true, 
+      card,
+      remainingDraws: Math.max(0, remainingDraws),
+      limitReached: remainingDraws <= 0
+    })
   } catch (error) {
     console.error('Save draw error:', error)
     return NextResponse.json({ error: 'Failed to save draw' }, { status: 500 })

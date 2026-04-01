@@ -25,7 +25,7 @@ export interface Database {
       }
       collections: {
         Row: {
-          id: number
+          id: string
           user_id: string
           card_id: number
           is_favorite: boolean
@@ -42,7 +42,7 @@ export interface Database {
       }
       daily_draws: {
         Row: {
-          id: number
+          id: string
           user_id: string
           card_id: number
           draw_date: string
@@ -55,6 +55,7 @@ export interface Database {
           card_id: number
           draw_date?: string
           category?: 'love' | 'career' | 'health' | 'spirituality'
+          draw_count?: number
         }
         Update: {
           draw_count?: number
@@ -63,7 +64,7 @@ export interface Database {
       }
       manifestations: {
         Row: {
-          id: number
+          id: string
           user_id: string
           intention: string
           target_moon_phase: string | null

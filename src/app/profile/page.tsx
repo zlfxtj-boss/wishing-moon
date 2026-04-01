@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import Navbar from '@/components/layout/Navbar'
 import { useAuth } from '@/contexts/AuthContext'
 import { useTheme } from '@/lib/theme'
+import { getCollections } from '@/lib/collections'
 
 interface ProfileStats {
   totalDraws: number
@@ -24,6 +25,7 @@ export default function ProfilePage() {
   const router = useRouter()
   const [stats, setStats] = useState<ProfileStats>({ totalDraws: 0, favorites: 0, streak: 0 })
   const [loadingStats, setLoadingStats] = useState(false)
+  const [statsError, setStatsError] = useState<string | null>(null)
 
   // Settings state
   const [notificationsEnabled, setNotificationsEnabled] = useState(false)
@@ -50,41 +52,65 @@ export default function ProfilePage() {
   const fetchStats = useCallback(async () => {
     if (!user) return
     setLoadingStats(true)
+    setStatsError(null)
+    
     try {
-      const res = await fetch('/api/collections')
-      if (res.ok) {
-        const data = await res.json()
-        const collections = data.collections || []
-        const history = data.history || []
+      // Use the getCollections function directly (client-side)
+      const data = await getCollections()
+      
+      const collections = data.collections || []
+      const history = data.history || []
 
-        // Calculate streak (consecutive days with draws)
-        let streak = 0
-        const today = new Date()
-        const drawDates = [...new Set(history.map((h: any) => h.draw_date))].sort().reverse()
-        for (let i = 0; i < drawDates.length; i++) {
-          const expected = new Date(today)
-          expected.setDate(expected.getDate() - i)
-          const expectedStr = expected.toISOString().split('T')[0]
-          if (drawDates.includes(expectedStr)) {
-            streak++
-          } else {
-            break
-          }
+      // Calculate streak (consecutive days with draws)
+      let streak = 0
+      const today = new Date()
+      
+      // Get unique draw dates and sort descending
+      const drawDates = [...new Set(history.map((h: any) => h.draw_date))].sort().reverse()
+      
+      for (let i = 0; i < drawDates.length; i++) {
+        const expected = new Date(today)
+        expected.setDate(expected.getDate() - i)
+        const expectedStr = expected.toISOString().split('T')[0]
+        if (drawDates.includes(expectedStr)) {
+          streak++
+        } else {
+          break
         }
-
-        setStats({
-          totalDraws: history.length,
-          favorites: collections.length,
-          streak,
-        })
       }
+
+      // Count favorites (cards where is_favorite is true)
+      const favoriteCount = collections.filter((c: any) => c.is_favorite !== false).length
+
+      setStats({
+        totalDraws: history.length,
+        favorites: favoriteCount,
+        streak,
+      })
+      
+      console.log('[Profile] Stats loaded:', {
+        totalDraws: history.length,
+        favorites: favoriteCount,
+        streak,
+        collectionsCount: collections.length,
+        historyCount: history.length,
+      })
+    } catch (err: any) {
+      console.error('[Profile] Failed to fetch stats:', err)
+      setStatsError(err.message || 'Failed to load stats')
+      // Keep showing 0 but don't crash
     } finally {
       setLoadingStats(false)
     }
   }, [user])
 
   useEffect(() => {
-    if (user) fetchStats()
+    if (user) {
+      fetchStats()
+    } else {
+      // Reset stats when logged out
+      setStats({ totalDraws: 0, favorites: 0, streak: 0 })
+    }
   }, [user, fetchStats])
 
   const handleSignOut = async () => {
@@ -220,7 +246,7 @@ export default function ProfilePage() {
             ) : (
               <p className="text-2xl font-bold text-yellow-400">{stats.totalDraws}</p>
             )}
-            <p className="text-white/60 text-xs">Cards Drawn</p>
+            <p className="text-white/60 text-xs mt-1">Cards Drawn</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -233,7 +259,7 @@ export default function ProfilePage() {
             ) : (
               <p className="text-2xl font-bold text-pink-400">{stats.favorites}</p>
             )}
-            <p className="text-white/60 text-xs">Favorites</p>
+            <p className="text-white/60 text-xs mt-1">Favorites</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -246,9 +272,22 @@ export default function ProfilePage() {
             ) : (
               <p className="text-2xl font-bold text-purple-400">{stats.streak}</p>
             )}
-            <p className="text-white/60 text-xs">Day Streak</p>
+            <p className="text-white/60 text-xs mt-1">Day Streak</p>
           </motion.div>
         </div>
+        
+        {/* Stats error hint */}
+        {statsError && user && !loadingStats && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-3 px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 rounded-xl"
+          >
+            <p className="text-yellow-400/80 text-xs">
+              Stats may not be accurate. Please make sure the Supabase tables are set up correctly.
+            </p>
+          </motion.div>
+        )}
       </section>
 
       {/* Settings Menu */}

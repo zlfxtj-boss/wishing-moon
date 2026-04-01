@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Share2, Heart, RefreshCw, LogIn, LogOut, User } from 'lucide-react'
+import { ArrowLeft, Share2, Heart, RefreshCw, LogIn, LogOut, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import TarotCardFlip from '@/components/features/TarotCardFlip'
@@ -13,6 +13,13 @@ import type { TarotCard, MoonPhase } from '@/types'
 interface DrawResult {
   card: TarotCard
   moonPhase: MoonPhase
+}
+
+interface DrawCountInfo {
+  remainingDraws: number
+  maxDraws: number
+  totalDrawsToday: number
+  limitReached: boolean
 }
 
 export default function DrawPage() {
@@ -27,20 +34,57 @@ export default function DrawPage() {
   const [favLoading, setFavLoading] = useState(false)
   const [savingDraw, setSavingDraw] = useState(false)
   const [cardKey, setCardKey] = useState(0) // Force remount on new draw to reset flip state
+  const [drawCountInfo, setDrawCountInfo] = useState<DrawCountInfo>({
+    remainingDraws: 3,
+    maxDraws: 3,
+    totalDrawsToday: 0,
+    limitReached: false,
+  })
+  const [limitMessage, setLimitMessage] = useState<string | null>(null)
+
+  // Fetch remaining draw count
+  const fetchDrawCount = useCallback(async () => {
+    if (!user) return
+    try {
+      const res = await fetch('/api/draw')
+      if (res.ok) {
+        const data = await res.json()
+        setDrawCountInfo(data)
+      }
+    } catch (e) {
+      // Silent fail
+    }
+  }, [user])
+
+  useEffect(() => {
+    if (user) {
+      fetchDrawCount()
+    }
+  }, [user, fetchDrawCount])
 
   const handleDraw = useCallback(async () => {
+    // Check if limit reached (for logged-in users)
+    if (user && drawCountInfo.limitReached) {
+      setLimitMessage('今日抽牌次数已用完，请明天再来')
+      return
+    }
+
     setIsDrawing(true)
     setShowResult(false)
     setError(null)
     setIsFavorited(false)
+    setLimitMessage(null)
 
     try {
+      // First, get a random card
       const response = await fetch('/api/draw')
       if (!response.ok) throw new Error('Failed to draw card')
       const data: DrawResult = await response.json()
-      setDrawnCard(data.card)
+      
+      // Update moon phase
       setMoonPhase(data.moonPhase)
       setCardKey(k => k + 1) // Reset flip state
+      setDrawnCard(data.card)
       setIsDrawing(false)
       setShowResult(true)
 
@@ -54,13 +98,24 @@ export default function DrawPage() {
           // Ignore
         }
         
+        // Save the draw
         setSavingDraw(true)
         try {
-          await fetch('/api/draw', {
+          const saveRes = await fetch('/api/draw', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cardId: data.card.id, category }),
           })
+          
+          if (saveRes.status === 429) {
+            // Limit reached
+            const limitData = await saveRes.json()
+            setLimitMessage('今日抽牌次数已用完，请明天再来')
+            setDrawCountInfo(prev => ({ ...prev, limitReached: true, remainingDraws: 0 }))
+          } else if (saveRes.ok) {
+            // Refresh draw count
+            fetchDrawCount()
+          }
         } catch (e) {
           // Silent fail for draw saving
         }
@@ -70,7 +125,7 @@ export default function DrawPage() {
       setError('Failed to draw card. Please try again.')
       setIsDrawing(false)
     }
-  }, [user, category])
+  }, [user, category, drawCountInfo.limitReached, fetchDrawCount])
 
   const handleToggleFavorite = async () => {
     if (!drawnCard || !user) return
@@ -134,6 +189,27 @@ export default function DrawPage() {
           <p className="text-white/60 text-sm mt-1">
             {moonPhase ? `${moonPhase.emoji} ${moonPhase.name}` : 'Receive your card of the day'}
           </p>
+          {/* Remaining draws indicator for logged-in users */}
+          {user && (
+            <div className="mt-2 flex items-center gap-2">
+              <span className="text-yellow-400/80 text-xs font-decorative">今日剩余:</span>
+              <div className="flex gap-1">
+                {[0, 1, 2].map(i => (
+                  <div
+                    key={i}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      i < drawCountInfo.remainingDraws
+                        ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'
+                        : 'bg-white/20'
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="text-white/40 text-xs">
+                {drawCountInfo.remainingDraws}/{drawCountInfo.maxDraws}
+              </span>
+            </div>
+          )}
         </div>
         <button
           onClick={handleAuth}
@@ -165,7 +241,7 @@ export default function DrawPage() {
             <Link href="/login" className="underline">Sign in</Link> to save your draws and build your collection
           </motion.div>
         )}
-        {user && !showResult && (
+        {user && !showResult && !limitMessage && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -177,16 +253,20 @@ export default function DrawPage() {
         )}
       </AnimatePresence>
 
-      {/* Error */}
+      {/* Error / Limit Message */}
       <AnimatePresence>
-        {error && (
+        {(error || limitMessage) && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="mx-6 mb-4 px-4 py-3 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400 text-sm"
+            className={`mx-6 mb-4 px-4 py-3 border rounded-xl text-sm ${
+              limitMessage 
+                ? 'bg-orange-500/20 border-orange-500/50 text-orange-400'
+                : 'bg-red-500/20 border-red-500/50 text-red-400'
+            }`}
           >
-            {error}
+            {limitMessage || error}
           </motion.div>
         )}
       </AnimatePresence>
@@ -252,6 +332,13 @@ export default function DrawPage() {
                   moonPhase={moonPhase?.name}
                   category={category}
                   showReading={showResult}
+                  onFlip={() => {
+                    // Trigger music on flip
+                    if (typeof window !== 'undefined') {
+                      const event = new CustomEvent('playCardMusic', { detail: { cardId: drawnCard.id } })
+                      window.dispatchEvent(event)
+                    }
+                  }}
                 />
               </motion.div>
             )}
@@ -285,21 +372,40 @@ export default function DrawPage() {
         {!showResult ? (
           <button
             onClick={handleDraw}
-            disabled={isDrawing}
-            className="w-full py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black font-bold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            disabled={isDrawing || !!(user && drawCountInfo.limitReached)}
+            className={`w-full py-4 font-bold rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed ${
+              user && drawCountInfo.limitReached
+                ? 'bg-white/10 text-white/40 border border-white/10'
+                : 'bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black'
+            }`}
           >
-            {isDrawing ? 'Drawing...' : (user ? 'Draw Your Card' : 'Draw Your Card (Guest)')}
+            {isDrawing ? (
+              <span className="flex items-center justify-center gap-2">
+                <Loader2 className="w-5 h-5 animate-spin" />
+                Drawing...
+              </span>
+            ) : user && drawCountInfo.limitReached ? (
+              '今日抽牌次数已用完'
+            ) : user ? (
+              `Draw Your Card (${drawCountInfo.remainingDraws} left)`
+            ) : (
+              'Draw Your Card (Guest)'
+            )}
           </button>
         ) : (
           <div className="space-y-3">
             <div className="flex gap-3">
               <button
                 onClick={handleDraw}
-                disabled={isDrawing}
-                className="flex-1 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all flex items-center justify-center gap-2"
+                disabled={isDrawing || !!(user && drawCountInfo.limitReached)}
+                className={`flex-1 py-3.5 font-semibold rounded-xl transition-all flex items-center justify-center gap-2 ${
+                  user && drawCountInfo.limitReached
+                    ? 'bg-white/5 text-white/30 cursor-not-allowed'
+                    : 'bg-white/10 hover:bg-white/20 text-white'
+                }`}
               >
                 <RefreshCw size={16} />
-                Draw Again
+                {user && drawCountInfo.limitReached ? '明日再来' : 'Draw Again'}
               </button>
               <button
                 onClick={handleShare}

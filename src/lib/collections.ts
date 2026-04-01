@@ -47,30 +47,50 @@ export async function getCollections(): Promise<CollectionsData> {
   }
 
   console.log('[Collections] Fetching collections for user:', user.id)
-  const { data: collections, error } = await supabase
+  
+  // Fetch favorites/collections
+  const { data: collections, error: collectionsError } = await supabase
     .from('collections')
     .select('*')
     .eq('user_id', user.id)
     .order('collected_at', { ascending: false })
 
-  console.log('[Collections] Collections result:', collections?.length, 'Error:', error)
-  if (error) {
-    console.error('[Collections] Collections error:', error)
-    throw error
+  console.log('[Collections] Collections result:', collections?.length, 'Error:', collectionsError)
+  if (collectionsError) {
+    console.error('[Collections] Collections error:', collectionsError)
+    throw collectionsError
   }
 
-  const { data: history } = await supabase
+  // Fetch draw history from daily_draws table
+  const { data: history, error: historyError } = await supabase
     .from('daily_draws')
     .select('*')
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
     .limit(100)
 
-  console.log('[Collections] History result:', history?.length)
+  console.log('[Collections] History result:', history?.length, 'Error:', historyError)
+
+  // Normalize collections data - handle both old and new schema
+  const normalizedCollections = (collections || []).map((col: any) => ({
+    id: col.id,
+    card_id: col.card_id,
+    is_favorite: col.is_favorite !== undefined ? col.is_favorite : true, // Default to true for favorites
+    collected_at: col.collected_at || col.created_at,
+  }))
+
+  // Normalize history data
+  const normalizedHistory = (history || []).map((h: any) => ({
+    id: h.id,
+    card_id: h.card_id,
+    draw_date: h.draw_date,
+    category: h.category || 'love',
+    created_at: h.created_at,
+  }))
 
   return {
-    collections: collections || [],
-    history: history || [],
+    collections: normalizedCollections,
+    history: normalizedHistory,
   }
 }
 
@@ -133,6 +153,7 @@ export async function removeFromFavorites(cardId: number): Promise<void> {
     throw new Error('Not authenticated')
   }
 
+  // For UUID-based tables, delete by user_id and card_id
   const { error } = await supabase
     .from('collections')
     .delete()
@@ -160,7 +181,7 @@ export async function isCardFavorited(cardId: number): Promise<boolean> {
     .select('id')
     .eq('user_id', user.id)
     .eq('card_id', cardId)
-    .single()
+    .maybeSingle()
 
   return !!data
 }

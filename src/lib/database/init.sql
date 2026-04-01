@@ -16,8 +16,8 @@ CREATE TABLE IF NOT EXISTS collections (
   id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
   card_id INTEGER NOT NULL,
-  card_data JSONB NOT NULL,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  is_favorite BOOLEAN DEFAULT TRUE,
+  collected_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   
   -- Prevent duplicate entries
   UNIQUE(user_id, card_id)
@@ -36,9 +36,46 @@ CREATE POLICY "Users can insert their own collections"
   ON collections FOR INSERT 
   WITH CHECK (auth.uid() = user_id);
 
+-- Policy: Users can update their own collections
+CREATE POLICY "Users can update their own collections" 
+  ON collections FOR UPDATE 
+  USING (auth.uid() = user_id);
+
 -- Policy: Users can delete their own collections
 CREATE POLICY "Users can delete their own collections" 
   ON collections FOR DELETE 
+  USING (auth.uid() = user_id);
+
+-- =============================================
+-- Daily Draws Table
+-- Track each user's daily draw count (max 3 per day)
+-- =============================================
+CREATE TABLE IF NOT EXISTS daily_draws (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  card_id INTEGER NOT NULL,
+  draw_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  draw_count INTEGER DEFAULT 1,
+  category TEXT DEFAULT 'love' CHECK (category IN ('love', 'career', 'health', 'spirituality')),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Enable Row Level Security
+ALTER TABLE daily_draws ENABLE ROW LEVEL SECURITY;
+
+-- Policy: Users can only see their own draws
+CREATE POLICY "Users can view their own draws" 
+  ON daily_draws FOR SELECT 
+  USING (auth.uid() = user_id);
+
+-- Policy: Users can insert their own draws
+CREATE POLICY "Users can insert their own draws" 
+  ON daily_draws FOR INSERT 
+  WITH CHECK (auth.uid() = user_id);
+
+-- Policy: Users can update their own draws
+CREATE POLICY "Users can update their own draws" 
+  ON daily_draws FOR UPDATE 
   USING (auth.uid() = user_id);
 
 -- =============================================
@@ -53,7 +90,7 @@ CREATE TABLE IF NOT EXISTS daily_readings (
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   
   -- One reading per user per day
-  CONSTRAINT one_reading_per_day UNIQUE (user_id, created_at)
+  CONSTRAINT one_reading_per_day UNIQUE (user_id, (DATE(created_at)))
 );
 
 -- Enable Row Level Security
@@ -74,6 +111,8 @@ CREATE POLICY "Users can insert their own readings"
 -- =============================================
 CREATE INDEX IF NOT EXISTS idx_collections_user_id ON collections(user_id);
 CREATE INDEX IF NOT EXISTS idx_collections_card_id ON collections(card_id);
+CREATE INDEX IF NOT EXISTS idx_daily_draws_user_id ON daily_draws(user_id);
+CREATE INDEX IF NOT EXISTS idx_daily_draws_draw_date ON daily_draws(user_id, draw_date);
 CREATE INDEX IF NOT EXISTS idx_daily_readings_user_id ON daily_readings(user_id);
 CREATE INDEX IF NOT EXISTS idx_daily_readings_created_at ON daily_readings(created_at);
 
@@ -86,13 +125,24 @@ RETURNS INTEGER AS $$
 $$ LANGUAGE SQL STABLE;
 
 -- =============================================
+-- Function to get user's draw count for today
+-- =============================================
+CREATE OR REPLACE FUNCTION get_today_draw_count(p_user_id UUID)
+RETURNS INTEGER AS $$
+  SELECT COALESCE(SUM(draw_count)::INTEGER, 0)
+  FROM daily_draws 
+  WHERE user_id = p_user_id 
+    AND draw_date = CURRENT_DATE;
+$$ LANGUAGE SQL STABLE;
+
+-- =============================================
 -- Function to get reading streak
 -- =============================================
 CREATE OR REPLACE FUNCTION get_reading_streak(p_user_id UUID)
 RETURNS INTEGER AS $$
   WITH daily AS (
     SELECT DISTINCT DATE(created_at) as read_date
-    FROM daily_readings
+    FROM daily_draws
     WHERE user_id = p_user_id
     ORDER BY read_date DESC
   ),
