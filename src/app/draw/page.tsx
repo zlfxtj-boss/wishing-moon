@@ -71,12 +71,15 @@ export default function DrawPage() {
         await fetch(`/api/collections?cardId=${drawnCard.id}`, { method: 'DELETE' })
         setIsFavorited(false)
       } else {
-        await fetch('/api/collections', {
+        const res = await fetch('/api/collections', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ cardId: drawnCard.id, isFavorite: true }),
         })
+        if (!res.ok) throw new Error('Failed to save')
         setIsFavorited(true)
+        // Reload to update collection page data
+        window.location.reload()
       }
     } catch (e) {
       // Silent fail
