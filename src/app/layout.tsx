@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/lib/theme";
 import { AuthProvider } from "@/contexts/AuthContext";
 import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
+import MusicPlayer from "@/components/features/MusicPlayer";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <ThemeProvider>
           <AuthProvider>
             {children}
+            <MusicPlayer />
             <ServiceWorkerRegister />
           </AuthProvider>
         </ThemeProvider>
