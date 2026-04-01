@@ -53,10 +53,22 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!supabase) {
+      console.error('Supabase client is null')
+      return NextResponse.json({ error: 'Server config error' }, { status: 500 })
+    }
+    
+    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    console.log('Auth result:', { user: user?.id, authError })
+
+    if (authError) {
+      console.error('Auth error:', authError)
+      return NextResponse.json({ error: 'Auth failed: ' + authError.message }, { status: 401 })
+    }
 
     if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      return NextResponse.json({ error: 'Unauthorized - no user' }, { status: 401 })
     }
 
     const body = await request.json()
@@ -84,12 +96,13 @@ export async function POST(request: NextRequest) {
       .select()
       .single()
 
+    console.log('Upsert result:', { data, error })
     if (error) throw error
 
     return NextResponse.json({ success: true, collection: { ...data, card_data: card } })
   } catch (error) {
     console.error('Add collection error:', error)
-    return NextResponse.json({ error: 'Failed to add to collection' }, { status: 500 })
+    return NextResponse.json({ error: 'Failed to add to collection: ' + (error as Error).message }, { status: 500 })
   }
 }
 

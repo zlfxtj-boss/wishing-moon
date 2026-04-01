@@ -12,9 +12,11 @@ export async function createClient() {
       supabaseUrl === 'your_supabase_project_url' ||
       supabaseAnonKey === 'your_supabase_anon_key' ||
       !supabaseUrl.startsWith('https://')) {
-    // Return null when not configured - handle in components
+    console.error('Supabase not configured:', { supabaseUrl, hasKey: !!supabaseAnonKey })
     return null as any;
   }
+
+  console.log('Creating Supabase server client with URL:', supabaseUrl)
 
   return createServerClient(
     supabaseUrl,

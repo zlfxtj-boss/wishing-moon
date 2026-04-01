@@ -18,9 +18,16 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const supabase = await createClient()
-    const { data: { user } } = await supabase.auth.getUser()
+    
+    if (!supabase) {
+      console.error('Supabase client null in POST /api/draw')
+      return NextResponse.json({ error: 'Server config error' }, { status: 500 })
+    }
+    
+    const { data: { user }, error: authError } = await supabase.auth.getUser()
+    console.log('POST /api/draw auth:', { userId: user?.id, authError })
 
-    if (!user) {
+    if (authError || !user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
