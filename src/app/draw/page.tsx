@@ -66,9 +66,11 @@ export default function DrawPage() {
   const handleToggleFavorite = async () => {
     if (!drawnCard || !user) return
     setFavLoading(true)
+    setError(null)
     try {
       if (isFavorited) {
-        await fetch(`/api/collections?cardId=${drawnCard.id}`, { method: 'DELETE' })
+        const res = await fetch(`/api/collections?cardId=${drawnCard.id}`, { method: 'DELETE' })
+        if (!res.ok) throw new Error('Failed to remove')
         setIsFavorited(false)
       } else {
         const res = await fetch('/api/collections', {
@@ -76,13 +78,13 @@ export default function DrawPage() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ cardId: drawnCard.id, isFavorite: true }),
         })
-        if (!res.ok) throw new Error('Failed to save')
+        const data = await res.json()
+        if (!res.ok) throw new Error(data.error || 'Failed to save')
         setIsFavorited(true)
-        // Reload to update collection page data
         window.location.reload()
       }
-    } catch (e) {
-      // Silent fail
+    } catch (e: any) {
+      setError('Save failed: ' + e.message)
     }
     setFavLoading(false)
   }
