@@ -25,23 +25,39 @@ export interface CollectionsData {
 
 // Get all collections and history for current user
 export async function getCollections(): Promise<CollectionsData> {
+  console.log('[Collections] getCollections called')
   const supabase = createClient()
+  
   if (!supabase) {
+    console.error('[Collections] Supabase not configured - URL:', process.env.NEXT_PUBLIC_SUPABASE_URL)
     throw new Error('Supabase not configured')
   }
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { user }, error: userError } = await supabase.auth.getUser()
+  console.log('[Collections] User:', user?.id, 'Error:', userError)
+  
+  if (userError) {
+    console.error('[Collections] Auth error:', userError)
+    throw new Error('Auth error: ' + userError.message)
+  }
+  
   if (!user) {
+    console.error('[Collections] No user found')
     throw new Error('Not authenticated')
   }
 
+  console.log('[Collections] Fetching collections for user:', user.id)
   const { data: collections, error } = await supabase
     .from('collections')
     .select('*')
     .eq('user_id', user.id)
     .order('collected_at', { ascending: false })
 
-  if (error) throw error
+  console.log('[Collections] Collections result:', collections?.length, 'Error:', error)
+  if (error) {
+    console.error('[Collections] Collections error:', error)
+    throw error
+  }
 
   const { data: history } = await supabase
     .from('daily_draws')
@@ -49,6 +65,8 @@ export async function getCollections(): Promise<CollectionsData> {
     .eq('user_id', user.id)
     .order('created_at', { ascending: false })
     .limit(100)
+
+  console.log('[Collections] History result:', history?.length)
 
   return {
     collections: collections || [],
@@ -58,17 +76,29 @@ export async function getCollections(): Promise<CollectionsData> {
 
 // Add to favorites
 export async function addToFavorites(cardId: number): Promise<void> {
+  console.log('[Collections] addToFavorites called, cardId:', cardId)
   const supabase = createClient()
+  
   if (!supabase) {
+    console.error('[Collections] Supabase not configured')
     throw new Error('Supabase not configured')
   }
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { user }, error: userError } = await supabase.auth.getUser()
+  console.log('[Collections] User:', user?.id, 'Error:', userError)
+  
+  if (userError) {
+    throw new Error('Auth error: ' + userError.message)
+  }
+  
   if (!user) {
+    console.error('[Collections] No user - not authenticated')
     throw new Error('Not authenticated')
   }
 
-  const { error } = await supabase
+  console.log('[Collections] Upserting for user:', user.id, 'cardId:', cardId)
+  
+  const { data, error } = await supabase
     .from('collections')
     .upsert({
       user_id: user.id,
@@ -77,13 +107,23 @@ export async function addToFavorites(cardId: number): Promise<void> {
     }, {
       onConflict: 'user_id,card_id',
     })
+    .select()
 
-  if (error) throw error
+  console.log('[Collections] Upsert result:', data, 'Error:', error)
+  
+  if (error) {
+    console.error('[Collections] Upsert error:', error)
+    throw error
+  }
+  
+  console.log('[Collections] Successfully added to favorites!')
 }
 
 // Remove from favorites
 export async function removeFromFavorites(cardId: number): Promise<void> {
+  console.log('[Collections] removeFromFavorites called, cardId:', cardId)
   const supabase = createClient()
+  
   if (!supabase) {
     throw new Error('Supabase not configured')
   }
@@ -99,7 +139,12 @@ export async function removeFromFavorites(cardId: number): Promise<void> {
     .eq('user_id', user.id)
     .eq('card_id', cardId)
 
-  if (error) throw error
+  if (error) {
+    console.error('[Collections] Delete error:', error)
+    throw error
+  }
+  
+  console.log('[Collections] Successfully removed from favorites!')
 }
 
 // Check if card is favorited
