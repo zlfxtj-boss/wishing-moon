@@ -2,70 +2,63 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Music, Play, Pause, Volume2, VolumeX } from 'lucide-react'
+import { Music, Play, Pause, Volume2, VolumeX, Loader2 } from 'lucide-react'
+import {
+  getCardType,
+  MUSIC_STYLES,
+  generateMiniMaxMusic,
+  isMiniMaxConfigured,
+  type CardType,
+} from '@/lib/music-minimax'
 
-// Card type to music style mapping
-type CardType = 'major' | 'wands' | 'cups' | 'swords' | 'pentacles'
+// Legacy type alias for internal use
+type LegacyCardType = 'major' | 'wands' | 'cups' | 'swords' | 'pentacles'
 
-function getCardType(cardId: number): CardType {
-  if (cardId <= 21) return 'major'
-  if (cardId <= 35) return 'wands'
-  if (cardId <= 49) return 'cups'
-  if (cardId <= 63) return 'swords'
-  return 'pentacles'
-}
-
-// Music configurations for each card type
-const MUSIC_STYLES: Record<CardType, { notes: number[], tempo: number; description: string; color: string }> = {
-  // Major Arcana - mysterious ethereal, perfect fifths and octaves
+// Music configurations for each card type (used by Web Audio fallback)
+const LEGACY_MUSIC_STYLES: Record<LegacyCardType, { notes: number[], tempo: number; description: string; color: string }> = {
   major: {
-    notes: [130.81, 196.00, 261.63, 392.00, 523.25, 784.00], // C3, G3, C4, G4, C5, G5
+    notes: [130.81, 196.00, 261.63, 392.00, 523.25, 784.00],
     tempo: 8,
     description: 'Mysterious & Ethereal',
     color: '#C9A227',
   },
-  // Wands - passionate and energetic, major chords with drive
   wands: {
-    notes: [261.63, 329.63, 392.00, 523.25, 659.25], // C4, E4, G4, C5, E5
+    notes: [261.63, 329.63, 392.00, 523.25, 659.25],
     tempo: 6,
     description: 'Passionate & Energetic',
     color: '#E07B39',
   },
-  // Cups - gentle emotional, soft minor progressions
   cups: {
-    notes: [220.00, 261.63, 329.63, 440.00, 523.25], // A3, C4, E4, A4, C5
+    notes: [220.00, 261.63, 329.63, 440.00, 523.25],
     tempo: 10,
     description: 'Gentle & Emotional',
     color: '#4A90D9',
   },
-  // Swords - tense mysterious, diminished and suspension
   swords: {
-    notes: [146.83, 174.61, 220.00, 293.66, 349.23], // D3, F3, A3, D4, F4
+    notes: [146.83, 174.61, 220.00, 293.66, 349.23],
     tempo: 7,
     description: 'Tense & Mysterious',
     color: '#8E8EAF',
   },
-  // Pentacles - steady wealth, grounded major chords
   pentacles: {
-    notes: [196.00, 246.94, 293.66, 392.00, 493.88], // G3, B3, D4, G4, B4
+    notes: [196.00, 246.94, 293.66, 392.00, 493.88],
     tempo: 9,
     description: 'Steady & Prosperous',
     color: '#27AE60',
   },
 }
 
-// Create ambient music generator with card-specific style
+// Create ambient music generator with card-specific style (Web Audio fallback)
 const createCardMusic = (
   audioContext: AudioContext,
-  cardType: CardType,
+  cardType: LegacyCardType,
   volume: number = 0.15
 ): (() => void) => {
-  const style = MUSIC_STYLES[cardType]
+  const style = LEGACY_MUSIC_STYLES[cardType]
   const masterGain = audioContext.createGain()
   masterGain.gain.setValueAtTime(volume, audioContext.currentTime)
   masterGain.connect(audioContext.destination)
 
-  // Fade out after music ends
   const fadeOutStart = audioContext.currentTime + style.tempo - 2
   masterGain.gain.setValueAtTime(volume, audioContext.currentTime)
   masterGain.gain.linearRampToValueAtTime(volume * 0.8, fadeOutStart)
@@ -84,8 +77,6 @@ const createCardMusic = (
 
     osc.type = type
     osc.frequency.setValueAtTime(freq, audioContext.currentTime)
-    
-    // Slow frequency drift for ambient feel
     osc.frequency.linearRampToValueAtTime(freq * 1.015, audioContext.currentTime + style.tempo / 2)
     osc.frequency.linearRampToValueAtTime(freq * 0.985, audioContext.currentTime + style.tempo)
 
@@ -93,7 +84,6 @@ const createCardMusic = (
     filter.frequency.setValueAtTime(filterFreq, audioContext.currentTime)
     filter.Q.setValueAtTime(1, audioContext.currentTime)
 
-    // Envelope
     gain.gain.setValueAtTime(0, audioContext.currentTime)
     gain.gain.linearRampToValueAtTime(gainValue, audioContext.currentTime + delay + 1)
     gain.gain.linearRampToValueAtTime(gainValue * 0.6, audioContext.currentTime + delay + style.tempo / 2)
@@ -109,48 +99,36 @@ const createCardMusic = (
     return osc
   }
 
-  // Create layered oscillators based on card type
   const notes = style.notes
   
-  // Base pad - always present
   createOscillator(notes[0] / 2, 'sine', 0, 0.5, 400)
   
-  // Mid frequencies
   notes.slice(0, 3).forEach((freq, i) => {
     createOscillator(freq, 'sine', i * 0.5, 0.4 / (i + 1), 600)
-    // Add subtle harmonic
     createOscillator(freq * 2, 'triangle', i * 0.5 + 0.3, 0.15 / (i + 1), 500)
   })
 
-  // High harmonics for shimmer
   notes.slice(2, 5).forEach((freq, i) => {
     createOscillator(freq, 'sine', i * 0.3 + 1, 0.25 / (i + 1), 1200)
   })
 
-  // Card type specific effects
   if (cardType === 'major') {
-    // Add mysterious fifths
     createOscillator(notes[1], 'sine', 1.5, 0.3, 700)
     createOscillator(notes[1] * 1.5, 'triangle', 2, 0.2, 900)
   } else if (cardType === 'wands') {
-    // Add driving rhythm with slight detune
     createOscillator(notes[2], 'sawtooth', 0.5, 0.15, 400)
     createOscillator(notes[2] * 1.01, 'sawtooth', 0.7, 0.1, 400)
   } else if (cardType === 'cups') {
-    // Soft flowing harmonics
     createOscillator(notes[1] * 1.25, 'sine', 2, 0.2, 500)
     createOscillator(notes[2] * 0.75, 'triangle', 3, 0.15, 600)
   } else if (cardType === 'swords') {
-    // Tense suspended chords
     createOscillator(notes[0] * 1.414, 'square', 1, 0.1, 300)
     createOscillator(notes[1] * 1.414, 'square', 2, 0.1, 300)
   } else if (cardType === 'pentacles') {
-    // Grounded steady tones
     createOscillator(notes[0] * 2, 'triangle', 0, 0.3, 500)
     createOscillator(notes[0] * 3, 'sine', 1, 0.15, 400)
   }
 
-  // Return cleanup function
   return () => {
     masterGain.disconnect()
   }
@@ -164,6 +142,8 @@ export default function MusicPlayer() {
   const [isVisible, setIsVisible] = useState(false)
   const [showControls, setShowControls] = useState(false)
   const [currentMusicType, setCurrentMusicType] = useState<CardType | null>(null)
+  const [isGenerating, setIsGenerating] = useState(false)
+  const [generationError, setGenerationError] = useState<string | null>(null)
   const [volume, setVolume] = useState(() => {
     if (typeof window !== 'undefined') {
       return parseFloat(localStorage.getItem(VOLUME_STORAGE_KEY) || '0.5')
@@ -171,10 +151,12 @@ export default function MusicPlayer() {
     return 0.5
   })
   const audioContextRef = useRef<AudioContext | null>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const cleanupRef = useRef<(() => void) | null>(null)
   const isPlayingRef = useRef(false)
   const currentMusicTypeRef = useRef<CardType | null>(null)
   const musicTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const useMiniMaxRef = useRef(false)
 
   // Load saved preference
   useEffect(() => {
@@ -183,13 +165,14 @@ export default function MusicPlayer() {
       if (saved === 'true') {
         setIsVisible(true)
       }
+      // Check MiniMax availability once
+      useMiniMaxRef.current = isMiniMaxConfigured()
     }
   }, [])
 
   // Listen for card flip events to play card-specific music
   useEffect(() => {
     const handleCardFlip = (event: CustomEvent<{ cardId: number }>) => {
-      const cardType = getCardType(event.detail.cardId)
       playCardMusic(event.detail.cardId)
     }
 
@@ -210,56 +193,20 @@ export default function MusicPlayer() {
     }
   }, [])
 
-  const playCardMusic = useCallback((cardId: number) => {
-    const cardType = getCardType(cardId)
-    currentMusicTypeRef.current = cardType
-    setCurrentMusicType(cardType)
-
-    // Stop any existing music
-    if (cleanupRef.current) {
-      cleanupRef.current()
-      cleanupRef.current = null
-    }
-    if (musicTimeoutRef.current) {
-      clearTimeout(musicTimeoutRef.current)
-    }
-    if (audioContextRef.current) {
-      audioContextRef.current.close()
-      audioContextRef.current = null
-    }
-
-    // Create new audio context and play music
-    try {
-      audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)()
-      isPlayingRef.current = true
-      setIsPlaying(true)
-
-      const style = MUSIC_STYLES[cardType]
-      cleanupRef.current = createCardMusic(audioContextRef.current, cardType, volume * 0.3)
-
-      // Auto-stop after music duration + fade
-      musicTimeoutRef.current = setTimeout(() => {
-        isPlayingRef.current = false
-        setIsPlaying(false)
-        setCurrentMusicType(null)
-        if (cleanupRef.current) {
-          cleanupRef.current()
-          cleanupRef.current = null
-        }
-        if (audioContextRef.current) {
-          audioContextRef.current.close()
-          audioContextRef.current = null
-        }
-      }, (style.tempo + 2) * 1000)
-    } catch (e) {
-      console.warn('Web Audio API not supported')
-    }
-  }, [volume])
-
   const stopMusic = useCallback(() => {
     isPlayingRef.current = false
     setIsPlaying(false)
     setCurrentMusicType(null)
+    setGenerationError(null)
+
+    // Stop MiniMax audio
+    if (audioRef.current) {
+      audioRef.current.pause()
+      audioRef.current.src = ''
+      audioRef.current = null
+    }
+
+    // Stop Web Audio fallback
     if (cleanupRef.current) {
       cleanupRef.current()
       cleanupRef.current = null
@@ -274,16 +221,113 @@ export default function MusicPlayer() {
     }
   }, [])
 
+  const playCardMusic = useCallback(async (cardId: number) => {
+    const cardType = getCardType(cardId)
+    currentMusicTypeRef.current = cardType
+    setCurrentMusicType(cardType)
+    setGenerationError(null)
+
+    // Stop any existing music
+    stopMusic()
+
+    isPlayingRef.current = true
+    setIsPlaying(true)
+
+    // Try MiniMax first
+    if (useMiniMaxRef.current) {
+      const apiKey = process.env.NEXT_PUBLIC_MINIMAX_API_KEY
+      if (apiKey) {
+        setIsGenerating(true)
+        try {
+          const result = await generateMiniMaxMusic(cardType, apiKey)
+          setIsGenerating(false)
+
+          if (result.error) {
+            setGenerationError(result.error)
+            // Fallback to Web Audio
+            playWebAudioFallback(cardType)
+          } else if (result.url) {
+            // Play MiniMax music
+            playMiniMaxMusic(result.url)
+            return
+          }
+        } catch (e) {
+          setIsGenerating(false)
+          console.warn('MiniMax error, falling back to Web Audio:', e)
+          playWebAudioFallback(cardType)
+        }
+        return
+      }
+    }
+
+    // Fallback to Web Audio
+    playWebAudioFallback(cardType)
+  }, [stopMusic])
+
+  const playMiniMaxMusic = useCallback((url: string) => {
+    try {
+      const audio = new Audio(url)
+      audioRef.current = audio
+
+      audio.volume = volume * 0.6
+      audio.play().catch(e => {
+        console.warn('Audio playback failed:', e)
+        // Fallback to Web Audio
+        if (currentMusicTypeRef.current) {
+          playWebAudioFallback(currentMusicTypeRef.current)
+        }
+      })
+
+      audio.onended = () => {
+        isPlayingRef.current = false
+        setIsPlaying(false)
+        setCurrentMusicType(null)
+        audioRef.current = null
+      }
+
+      audio.onerror = () => {
+        console.warn('MiniMax audio load failed, trying Web Audio fallback')
+        if (currentMusicTypeRef.current) {
+          playWebAudioFallback(currentMusicTypeRef.current)
+        }
+      }
+
+      // Set timeout to stop after reasonable duration (2 minutes max for MiniMax)
+      musicTimeoutRef.current = setTimeout(() => {
+        stopMusic()
+      }, 120000)
+    } catch (e) {
+      console.warn('MiniMax audio creation failed:', e)
+      if (currentMusicTypeRef.current) {
+        playWebAudioFallback(currentMusicTypeRef.current)
+      }
+    }
+  }, [volume, stopMusic])
+
+  const playWebAudioFallback = useCallback((cardType: CardType) => {
+    try {
+      audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)()
+      const style = LEGACY_MUSIC_STYLES[cardType as LegacyCardType]
+      cleanupRef.current = createCardMusic(audioContextRef.current, cardType as LegacyCardType, volume * 0.3)
+
+      // Auto-stop after music duration + fade
+      musicTimeoutRef.current = setTimeout(() => {
+        stopMusic()
+      }, (style.tempo + 2) * 1000)
+    } catch (e) {
+      console.warn('Web Audio API not supported')
+      stopMusic()
+    }
+  }, [volume, stopMusic])
+
   const toggleMusic = useCallback(() => {
     if (isPlaying) {
       stopMusic()
       localStorage.setItem(MUSIC_STORAGE_KEY, 'false')
     } else {
       localStorage.setItem(MUSIC_STORAGE_KEY, 'true')
-      // Play default ambient music if no card music is playing
       if (!currentMusicTypeRef.current) {
-        // Play a gentle default
-        playCardMusic(0) // 0 = Major Arcana default
+        playCardMusic(0)
       }
     }
   }, [isPlaying, stopMusic, playCardMusic])
@@ -291,10 +335,10 @@ export default function MusicPlayer() {
   const handleVolumeChange = useCallback((newVolume: number) => {
     setVolume(newVolume)
     localStorage.setItem(VOLUME_STORAGE_KEY, String(newVolume))
-    // Update master gain if context exists
-    if (audioContextRef.current) {
-      const gain = audioContextRef.current.createGain()
-      gain.gain.setValueAtTime(newVolume * 0.3, audioContextRef.current.currentTime)
+    
+    // Update MiniMax audio volume
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume * 0.6
     }
   }, [])
 
@@ -312,6 +356,8 @@ export default function MusicPlayer() {
   }, [stopMusic])
 
   const getMusicTypeDisplay = () => {
+    if (isGenerating) return 'Generating music...'
+    if (generationError) return 'Using fallback audio'
     if (!currentMusicType) return 'Tap a card to play music'
     return MUSIC_STYLES[currentMusicType].description
   }
@@ -364,6 +410,7 @@ export default function MusicPlayer() {
                 style={isPlaying && currentMusicType ? { backgroundColor: MUSIC_STYLES[currentMusicType].color } : undefined}
               />
               <span className="text-white text-sm font-medium">Tarot Music</span>
+              {isGenerating && <Loader2 size={14} className="animate-spin text-yellow-400 ml-auto" />}
             </div>
 
             {/* Current music type */}
@@ -379,6 +426,8 @@ export default function MusicPlayer() {
                 }}
               >
                 {MUSIC_STYLES[currentMusicType].description}
+                {isGenerating && ' (AI generating...)'}
+                {generationError && ' (fallback mode)'}
               </motion.div>
             )}
 
@@ -393,6 +442,7 @@ export default function MusicPlayer() {
             <button
               onClick={toggleMusic}
               className="w-full flex items-center justify-center gap-2 py-3 bg-white/10 hover:bg-white/20 rounded-xl text-white transition-all mb-3"
+              disabled={isGenerating}
             >
               {isPlaying ? <Pause size={18} /> : <Play size={18} />}
               <span className="text-sm">{isPlaying ? 'Stop Music' : 'Play Demo'}</span>
@@ -441,6 +491,13 @@ export default function MusicPlayer() {
                   </span>
                 ))}
               </div>
+            </div>
+
+            {/* MiniMax status */}
+            <div className="mt-2 pt-2 border-t border-white/10">
+              <p className="text-white/20 text-xs text-center">
+                {useMiniMaxRef.current ? 'MiniMax AI: Enabled' : 'MiniMax AI: Not configured'}
+              </p>
             </div>
           </motion.div>
         )}
