@@ -8,6 +8,7 @@ import Navbar from '@/components/layout/Navbar'
 import TarotCardFlip from '@/components/features/TarotCardFlip'
 import { useAuth } from '@/contexts/AuthContext'
 import { addToFavorites, removeFromFavorites, isCardFavorited } from '@/lib/collections'
+import { useTheme } from '@/lib/theme'
 import type { TarotCard, MoonPhase } from '@/types'
 
 interface DrawResult {
@@ -24,6 +25,7 @@ interface DrawCountInfo {
 
 export default function DrawPage() {
   const { user, loading: authLoading, signOut } = useAuth()
+  const { theme } = useTheme()
   const [isDrawing, setIsDrawing] = useState(false)
   const [drawnCard, setDrawnCard] = useState<TarotCard | null>(null)
   const [moonPhase, setMoonPhase] = useState<DrawResult['moonPhase'] | null>(null)
@@ -300,21 +302,341 @@ export default function DrawPage() {
             {!isDrawing && !showResult && (
               <motion.div
                 key="idle"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="w-full h-full bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-2xl border border-white/10 flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.92 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.92 }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="w-full h-full relative rounded-2xl overflow-hidden cursor-pointer group"
+                style={{
+                  // Theme-aware CSS variables
+                  '--glow-primary': theme === 'cyberpunk'
+                    ? 'rgba(0, 255, 255, 0.7)'
+                    : 'rgba(212, 160, 23, 0.8)',
+                  '--glow-secondary': theme === 'cyberpunk'
+                    ? 'rgba(255, 0, 255, 0.4)'
+                    : 'rgba(180, 120, 20, 0.5)',
+                  '--border-glow': theme === 'cyberpunk'
+                    ? 'rgba(0, 255, 255, 0.5)'
+                    : 'rgba(201, 162, 39, 0.6)',
+                  '--card-bg': theme === 'cyberpunk'
+                    ? 'rgba(10, 10, 30, 0.85)'
+                    : 'rgba(30, 20, 10, 0.90)',
+                } as React.CSSProperties}
               >
-                <div className="text-center">
-                  <motion.div
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                    className="text-5xl mb-4"
+                {/* === Animated Starfield Background === */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: theme === 'cyberpunk'
+                      ? `radial-gradient(ellipse at 15% 20%, rgba(120,0,255,0.25) 0%, transparent 45%),
+                         radial-gradient(ellipse at 85% 80%, rgba(0,200,255,0.15) 0%, transparent 45%),
+                         radial-gradient(ellipse at 50% 50%, rgba(60,0,120,0.3) 0%, transparent 65%),
+                         linear-gradient(160deg, #080818 0%, #0d0820 40%, #100828 100%)`
+                      : `radial-gradient(ellipse at 20% 25%, rgba(150,80,10,0.3) 0%, transparent 45%),
+                         radial-gradient(ellipse at 80% 75%, rgba(100,50,5,0.25) 0%, transparent 45%),
+                         radial-gradient(ellipse at 50% 50%, rgba(80,40,5,0.2) 0%, transparent 65%),
+                         linear-gradient(160deg, #1a0f05 0%, #251508 40%, #1a0c04 100%)`,
+                  }}
+                />
+
+                {/* === Starfield Dots (static positions, twinkling via animation) === */}
+                <div className="absolute inset-0" style={{
+                  backgroundImage: theme === 'cyberpunk'
+                    ? `radial-gradient(1.5px 1.5px at 12% 18%, rgba(200,220,255,0.9) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 27% 55%, rgba(180,200,255,0.7) 0%, transparent 100%),
+                       radial-gradient(2px 2px at 45% 8%, rgba(150,180,255,0.8) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 60% 35%, rgba(200,220,255,0.6) 0%, transparent 100%),
+                       radial-gradient(1.5px 1.5px at 78% 12%, rgba(180,200,255,0.9) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 88% 60%, rgba(160,200,255,0.5) 0%, transparent 100%),
+                       radial-gradient(2px 2px at 92% 85%, rgba(200,220,255,0.7) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 35% 92%, rgba(180,200,255,0.6) 0%, transparent 100%),
+                       radial-gradient(1.5px 1.5px at 55% 75%, rgba(200,220,255,0.8) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 8% 78%, rgba(160,200,255,0.5) 0%, transparent 100%)`
+                    : `radial-gradient(1.5px 1.5px at 15% 22%, rgba(255,220,150,0.85) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 32% 58%, rgba(255,210,130,0.65) 0%, transparent 100%),
+                       radial-gradient(2px 2px at 48% 10%, rgba(255,225,140,0.8) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 63% 38%, rgba(255,215,130,0.6) 0%, transparent 100%),
+                       radial-gradient(1.5px 1.5px at 80% 15%, rgba(255,220,145,0.9) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 90% 65%, rgba(255,210,130,0.5) 0%, transparent 100%),
+                       radial-gradient(2px 2px at 85% 88%, rgba(255,225,140,0.75) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 38% 95%, rgba(255,215,130,0.6) 0%, transparent 100%),
+                       radial-gradient(1.5px 1.5px at 58% 78%, rgba(255,220,145,0.8) 0%, transparent 100%),
+                       radial-gradient(1px 1px at 10% 80%, rgba(255,210,130,0.55) 0%, transparent 100%)`,
+                  animation: 'starTwinkle 3s ease-in-out infinite alternate',
+                }} />
+
+                {/* === Rotating Light Rays === */}
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: `conic-gradient(from 0deg at 50% 50%,
+                      transparent 0deg,
+                      rgba(255,215,0,0.06) 20deg,
+                      transparent 50deg,
+                      rgba(255,215,0,0.04) 100deg,
+                      transparent 140deg,
+                      rgba(255,215,0,0.05) 180deg,
+                      transparent 220deg,
+                      rgba(255,215,0,0.06) 260deg,
+                      transparent 300deg,
+                      rgba(255,215,0,0.04) 340deg,
+                      transparent 360deg)`,
+                    animation: 'raysRotate 25s linear infinite',
+                  }}
+                />
+
+                {/* === Glowing Border === */}
+                <div
+                  className="absolute inset-0 rounded-2xl pointer-events-none z-10"
+                  style={{
+                    border: theme === 'cyberpunk'
+                      ? '1.5px solid rgba(0,255,255,0.4)'
+                      : '2px solid rgba(201,162,39,0.55)',
+                    boxShadow: theme === 'cyberpunk'
+                      ? `inset 0 0 20px rgba(0,255,255,0.08), inset 0 0 40px rgba(255,0,255,0.05), 0 0 15px rgba(0,255,255,0.2), 0 0 30px rgba(0,255,255,0.1)`
+                      : `inset 0 0 15px rgba(201,162,39,0.15), inset 0 0 30px rgba(180,120,20,0.1), 0 0 12px rgba(201,162,39,0.25), 0 0 25px rgba(180,120,20,0.12)`,
+                    animation: 'borderPulse 4s ease-in-out infinite',
+                  }}
+                />
+
+                {/* === Corner Flourishes === */}
+                {[
+                  { top: 8, left: 8, rotate: '0deg' },
+                  { top: 8, right: 8, rotate: '90deg' },
+                  { bottom: 8, left: 8, rotate: '-90deg' },
+                  { bottom: 8, right: 8, rotate: '180deg' },
+                ].map((pos, i) => (
+                  <div
+                    key={i}
+                    className="absolute z-10 pointer-events-none"
+                    style={{
+                      top: pos.top,
+                      left: pos.left,
+                      right: pos.right,
+                      bottom: pos.bottom,
+                      width: 32,
+                      height: 32,
+                      transform: `rotate(${pos.rotate})`,
+                    }}
                   >
-                    ☽
+                    <svg viewBox="0 0 32 32" fill="none" className="w-full h-full" style={{
+                      filter: theme === 'cyberpunk'
+                        ? 'drop-shadow(0 0 4px rgba(0,255,255,0.7))'
+                        : 'drop-shadow(0 0 4px rgba(201,162,39,0.8))',
+                      animation: `cornerGlow 3s ease-in-out ${i * 0.5}s infinite alternate`,
+                    }}>
+                      {theme === 'cyberpunk' ? (
+                        // Cyberpunk corner: sharp geometric
+                        <path
+                          d="M2 16 L2 2 L16 2 M2 2 L8 2 L2 8"
+                          stroke={theme === 'cyberpunk' ? 'rgba(0,255,255,0.9)' : 'rgba(201,162,39,0.9)'}
+                          strokeWidth="1.5"
+                          fill="none"
+                        />
+                      ) : (
+                        // Oil Painting corner: ornate scroll
+                        <>
+                          <path
+                            d="M2 16 Q2 2 16 2"
+                            stroke="rgba(201,162,39,0.85)"
+                            strokeWidth="1.5"
+                            fill="none"
+                            strokeLinecap="round"
+                          />
+                          <path
+                            d="M2 12 Q2 6 8 2"
+                            stroke="rgba(180,140,30,0.7)"
+                            strokeWidth="1"
+                            fill="none"
+                            strokeLinecap="round"
+                          />
+                          <circle cx="16" cy="2" r="1.5" fill="rgba(201,162,39,0.9)" />
+                          <circle cx="2" cy="16" r="1" fill="rgba(180,140,30,0.7)" />
+                        </>
+                      )}
+                    </svg>
+                  </div>
+                ))}
+
+                {/* === Central Moon with Mystic Circle === */}
+                <div className="absolute inset-0 flex items-center justify-center z-10">
+                  <motion.div
+                    animate={{ scale: [1, 1.04, 1] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                    className="relative flex items-center justify-center"
+                  >
+                    {/* Outer mystic ring */}
+                    <div
+                      className="absolute rounded-full pointer-events-none"
+                      style={{
+                        width: 140,
+                        height: 140,
+                        border: theme === 'cyberpunk'
+                          ? '1px solid rgba(0,255,255,0.25)'
+                          : '1px solid rgba(201,162,39,0.3)',
+                        boxShadow: theme === 'cyberpunk'
+                          ? `0 0 15px rgba(0,255,255,0.15), inset 0 0 15px rgba(0,255,255,0.08)`
+                          : `0 0 12px rgba(201,162,39,0.2), inset 0 0 12px rgba(180,120,20,0.1)`,
+                        animation: 'ringRotate 12s linear infinite',
+                      }}
+                    />
+                    {/* Dashed inner ring */}
+                    <div
+                      className="absolute rounded-full pointer-events-none"
+                      style={{
+                        width: 120,
+                        height: 120,
+                        border: theme === 'cyberpunk'
+                          ? '1px dashed rgba(0,255,255,0.15)'
+                          : '1px dashed rgba(201,162,39,0.2)',
+                        animation: 'ringRotate 8s linear infinite reverse',
+                      }}
+                    />
+
+                    {/* Glow halo behind moon */}
+                    <div
+                      className="absolute rounded-full"
+                      style={{
+                        width: 80,
+                        height: 80,
+                        background: theme === 'cyberpunk'
+                          ? `radial-gradient(circle, rgba(0,255,255,0.25) 0%, rgba(120,0,255,0.15) 40%, transparent 70%)`
+                          : `radial-gradient(circle, rgba(212,160,23,0.3) 0%, rgba(180,100,20,0.15) 40%, transparent 70%)`,
+                        filter: 'blur(8px)',
+                        animation: 'haloPulse 3s ease-in-out infinite',
+                      }}
+                    />
+
+                    {/* Moon symbol */}
+                    <motion.div
+                      animate={{ y: [0, -4, 0] }}
+                      transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                      className="relative z-10"
+                      style={{
+                        fontSize: '3.8rem',
+                        lineHeight: 1,
+                        filter: theme === 'cyberpunk'
+                          ? 'drop-shadow(0 0 12px rgba(0,255,255,0.8))'
+                          : 'drop-shadow(0 0 10px rgba(212,160,23,0.9))',
+                      }}
+                    >
+                      ☽
+                    </motion.div>
+
+                    {/* Orbiting symbols (positioned around the ring) */}
+                    {[
+                      { angle: 0, symbol: '☆', delay: '0s' },
+                      { angle: 90, symbol: '✧', delay: '1s' },
+                      { angle: 180, symbol: '⚝', delay: '2s' },
+                      { angle: 270, symbol: '✦', delay: '3s' },
+                    ].map(({ angle, symbol, delay }) => {
+                      const rad = (angle * Math.PI) / 180
+                      const x = Math.cos(rad) * 70
+                      const y = Math.sin(rad) * 70
+                      return (
+                        <div
+                          key={angle}
+                          className="absolute pointer-events-none"
+                          style={{
+                            transform: `translate(${x - 8}px, ${y - 8}px)`,
+                            fontSize: '0.75rem',
+                            color: theme === 'cyberpunk'
+                              ? 'rgba(0,255,255,0.7)'
+                              : 'rgba(201,162,39,0.8)',
+                            animation: `starOrbit 4s linear ${delay} infinite`,
+                            textShadow: theme === 'cyberpunk'
+                              ? '0 0 6px rgba(0,255,255,0.8)'
+                              : '0 0 6px rgba(201,162,39,0.8)',
+                          }}
+                        >
+                          {symbol}
+                        </div>
+                      )
+                    })}
                   </motion.div>
-                  <p className="text-white/30 text-sm font-decorative tracking-wide">
-                    Tap below to receive your card
+                </div>
+
+                {/* === Mystic Symbols scattered around === */}
+                {/* Top center symbol */}
+                <div
+                  className="absolute top-[18%] left-1/2 -translate-x-1/2 z-10 pointer-events-none"
+                  style={{
+                    fontSize: '0.9rem',
+                    color: theme === 'cyberpunk'
+                      ? 'rgba(0,255,255,0.5)'
+                      : 'rgba(201,162,39,0.6)',
+                    animation: 'symbolFloat 5s ease-in-out infinite',
+                    textShadow: theme === 'cyberpunk'
+                      ? '0 0 8px rgba(0,255,255,0.6)'
+                      : '0 0 8px rgba(201,162,39,0.6)',
+                  }}
+                >
+                  ◈
+                </div>
+                {/* Bottom center symbol */}
+                <div
+                  className="absolute bottom-[22%] left-1/2 -translate-x-1/2 z-10 pointer-events-none"
+                  style={{
+                    fontSize: '0.8rem',
+                    color: theme === 'cyberpunk'
+                      ? 'rgba(255,0,255,0.45)'
+                      : 'rgba(180,120,20,0.55)',
+                    animation: 'symbolFloat 5s ease-in-out 1.5s infinite',
+                    textShadow: theme === 'cyberpunk'
+                      ? '0 0 8px rgba(255,0,255,0.5)'
+                      : '0 0 8px rgba(180,120,20,0.5)',
+                  }}
+                >
+                  ◇
+                </div>
+                {/* Left symbol */}
+                <div
+                  className="absolute left-[15%] top-1/2 -translate-y-1/2 z-10 pointer-events-none"
+                  style={{
+                    fontSize: '0.7rem',
+                    color: theme === 'cyberpunk'
+                      ? 'rgba(0,200,255,0.4)'
+                      : 'rgba(201,162,39,0.45)',
+                    animation: 'symbolFloat 6s ease-in-out 0.8s infinite',
+                    textShadow: theme === 'cyberpunk'
+                      ? '0 0 6px rgba(0,200,255,0.5)'
+                      : '0 0 6px rgba(201,162,39,0.5)',
+                  }}
+                >
+                  ⚝
+                </div>
+                {/* Right symbol */}
+                <div
+                  className="absolute right-[15%] top-1/2 -translate-y-1/2 z-10 pointer-events-none"
+                  style={{
+                    fontSize: '0.7rem',
+                    color: theme === 'cyberpunk'
+                      ? 'rgba(180,0,255,0.4)'
+                      : 'rgba(180,140,30,0.45)',
+                    animation: 'symbolFloat 6s ease-in-out 2.2s infinite',
+                    textShadow: theme === 'cyberpunk'
+                      ? '0 0 6px rgba(180,0,255,0.5)'
+                      : '0 0 6px rgba(180,140,30,0.5)',
+                  }}
+                >
+                  ✧
+                </div>
+
+                {/* === Bottom Text === */}
+                <div className="absolute bottom-6 inset-x-0 z-10 text-center">
+                  <p
+                    className="font-decorative tracking-widest text-sm"
+                    style={{
+                      color: theme === 'cyberpunk'
+                        ? 'rgba(0,255,255,0.65)'
+                        : 'rgba(201,162,39,0.75)',
+                      textShadow: theme === 'cyberpunk'
+                        ? '0 0 10px rgba(0,255,255,0.4)'
+                        : '0 0 10px rgba(201,162,39,0.4)',
+                      animation: 'textBreath 3s ease-in-out infinite',
+                    }}
+                  >
+                    点击下方领取你的命运之牌
                   </p>
                 </div>
               </motion.div>

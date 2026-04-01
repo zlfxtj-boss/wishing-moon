@@ -123,6 +123,53 @@ p { line-height: 1.6; }
   outline-offset: 2px;
 }
 
+/* ===== Idle Card Animations ===== */
+@keyframes starTwinkle {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@keyframes raysRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes borderPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes cornerGlow {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes haloPulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes symbolFloat {
+  0%, 100% { transform: translateY(0px); opacity: 0.5; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+
+@keyframes textBreath {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes starOrbit {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
 /* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
