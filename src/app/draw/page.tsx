@@ -67,7 +67,7 @@ export default function DrawPage() {
   const handleDraw = useCallback(async () => {
     // Check if limit reached (for logged-in users)
     if (user && drawCountInfo.limitReached) {
-      setLimitMessage('今日抽牌次数已用完，请明天再来')
+      setLimitMessage('Daily limit reached. Come back tomorrow!')
       return
     }
 
@@ -112,7 +112,7 @@ export default function DrawPage() {
           if (saveRes.status === 429) {
             // Limit reached
             const limitData = await saveRes.json()
-            setLimitMessage('今日抽牌次数已用完，请明天再来')
+            setLimitMessage('Daily limit reached. Come back tomorrow!')
             setDrawCountInfo(prev => ({ ...prev, limitReached: true, remainingDraws: 0 }))
           } else if (saveRes.ok) {
             // Refresh draw count
@@ -194,7 +194,7 @@ export default function DrawPage() {
           {/* Remaining draws indicator for logged-in users */}
           {user && (
             <div className="mt-2 flex items-center gap-2">
-              <span className="text-yellow-400/80 text-xs font-decorative">今日剩余:</span>
+              <span className="text-yellow-400/80 text-xs font-decorative">Remaining:</span>
               <div className="flex gap-1">
                 {[0, 1, 2].map(i => (
                   <div
@@ -636,7 +636,7 @@ export default function DrawPage() {
                       animation: 'textBreath 3s ease-in-out infinite',
                     }}
                   >
-                    点击下方领取你的命运之牌
+                    Tap below to receive your destiny
                   </p>
                 </div>
               </motion.div>
@@ -707,7 +707,7 @@ export default function DrawPage() {
                 Drawing...
               </span>
             ) : user && drawCountInfo.limitReached ? (
-              '今日抽牌次数已用完'
+              'Daily Limit Reached'
             ) : user ? (
               `Draw Your Card (${drawCountInfo.remainingDraws} left)`
             ) : (
@@ -727,7 +727,7 @@ export default function DrawPage() {
                 }`}
               >
                 <RefreshCw size={16} />
-                {user && drawCountInfo.limitReached ? '明日再来' : 'Draw Again'}
+                {user && drawCountInfo.limitReached ? 'Come Back Tomorrow' : 'Draw Again'}
               </button>
               <button
                 onClick={handleShare}

@@ -84,7 +84,7 @@ export default function Home() {
               boxShadow: 'var(--shadow-card)'
             }}
           >
-            触碰抽卡 · Draw Your Card
+            Draw Your Card
           </Link>
         </motion.div>
       </section>
@@ -138,7 +138,7 @@ export default function Home() {
           }}
         >
           <p className="text-yellow-400/70 text-xs">
-            Add to home screen for the best experience · 在浏览器中添加至主屏幕
+            Add to home screen for the best experience
           </p>
         </motion.div>
       </section>
