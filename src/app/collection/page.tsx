@@ -6,7 +6,8 @@ import { ArrowLeft, Search, Heart, Clock, LogIn, X } from 'lucide-react'
 import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import { useAuth } from '@/contexts/AuthContext'
-import { tarotCards } from '@/lib/tarot'
+import { tarotCards, getTarotCardById } from '@/lib/tarot'
+import { getCollections, removeFromFavorites } from '@/lib/collections'
 import type { TarotCard } from '@/types'
 
 type ViewTab = 'all' | 'favorites' | 'history'
@@ -42,12 +43,18 @@ export default function CollectionPage() {
     if (!user) return
     setLoadingData(true)
     try {
-      const res = await fetch('/api/collections')
-      if (res.ok) {
-        const data = await res.json()
-        setCollections(data.collections || [])
-        setHistory(data.history || [])
-      }
+      const data = await getCollections()
+      // Enrich with card data
+      const enrichedCollections = (data.collections || []).map((col) => ({
+        ...col,
+        card_data: getTarotCardById(col.card_id),
+      }))
+      const enrichedHistory = (data.history || []).map((h) => ({
+        ...h,
+        card_data: getTarotCardById(h.card_id),
+      }))
+      setCollections(enrichedCollections)
+      setHistory(enrichedHistory)
     } finally {
       setLoadingData(false)
     }
@@ -62,7 +69,7 @@ export default function CollectionPage() {
   const handleUnfavorite = async (cardId: number) => {
     setUnfavoriting(cardId)
     try {
-      await fetch(`/api/collections?cardId=${cardId}`, { method: 'DELETE' })
+      await removeFromFavorites(cardId)
       setCollections(prev => prev.filter(c => c.card_id !== cardId))
     } catch (e) {
       // Silent fail

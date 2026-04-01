@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import TarotCardFlip from '@/components/features/TarotCardFlip'
 import { useAuth } from '@/contexts/AuthContext'
+import { addToFavorites, removeFromFavorites, isCardFavorited } from '@/lib/collections'
 import type { TarotCard, MoonPhase } from '@/types'
 
 interface DrawResult {
@@ -43,8 +44,16 @@ export default function DrawPage() {
       setIsDrawing(false)
       setShowResult(true)
 
-      // If logged in, save the draw
+      // If logged in, check if already favorited and save the draw
       if (user) {
+        // Check if already favorited
+        try {
+          const favorited = await isCardFavorited(data.card.id)
+          setIsFavorited(favorited)
+        } catch (e) {
+          // Ignore
+        }
+        
         setSavingDraw(true)
         try {
           await fetch('/api/draw', {
@@ -69,17 +78,10 @@ export default function DrawPage() {
     setError(null)
     try {
       if (isFavorited) {
-        const res = await fetch(`/api/collections?cardId=${drawnCard.id}`, { method: 'DELETE' })
-        if (!res.ok) throw new Error('Failed to remove')
+        await removeFromFavorites(drawnCard.id)
         setIsFavorited(false)
       } else {
-        const res = await fetch('/api/collections', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ cardId: drawnCard.id, isFavorite: true }),
-        })
-        const data = await res.json()
-        if (!res.ok) throw new Error(data.error || 'Failed to save')
+        await addToFavorites(drawnCard.id)
         setIsFavorited(true)
         window.location.reload()
       }
